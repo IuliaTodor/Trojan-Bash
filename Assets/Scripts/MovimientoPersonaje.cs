@@ -19,13 +19,14 @@ public class MovimientoPerosnaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _rb.velocity = new Vector2(7, _rb.velocity.y);
             _animator.SetBool("Mover", true);
             _sr.flipX = false;
+
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
 
         {
             _rb.velocity = new Vector2(-7, _rb.velocity.y);
@@ -34,11 +35,11 @@ public class MovimientoPerosnaje : MonoBehaviour
         }
         if (Input.GetKeyDown(teclaSalto))
         {
-            // Aplicar una fuerza hacia arriba para que el personaje salte
+           
             _rb.velocity = new Vector2(_rb.velocity.x, fuerzaSalto);
             _animator.SetBool("Saltar", true);
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             _rb.velocity = Vector2.zero;
             _animator.SetBool("Mover", false);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovimientoPersonaje : MonoBehaviour
 {
     public float velocidadMovimiento = 5.0f;
-    public float fuerzaSalto = 10.0f;
+    public float fuerzaSalto = 20.0f;
     private Rigidbody2D rb;
     private bool enElSuelo;
 
@@ -24,16 +24,16 @@ public class MovimientoPersonaje : MonoBehaviour
         rb.velocity = movimiento;
 
         // Detectar si el personaje está en el suelo
-        enElSuelo = Physics2D.OverlapCircle(transform.position, 0.1f, LayerMask.GetMask("Suelo"));
+        
 
         // Saltar cuando se presiona la tecla de flecha arriba
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (enElSuelo)
+
+            if (rb.velocity.y < 0)
             {
-                // Aplicar fuerza de salto solo si el personaje está en el suelo
                 rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
-            }
+            } 
         }
     }
 }

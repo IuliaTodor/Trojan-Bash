@@ -8,6 +8,7 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-0:
       value: 5253570457065a0e0f0b082143735b441316487e2a7a20632c7f1c67bab1633c
       flags: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
     RecentlyUsedSceneGuid-1:
@@ -22,6 +23,11 @@ EditorUserSettings:
       value: 5255555253030f5859585d70157459444f15192f7d7f7e607d7e1c64b5b1636b
       flags: 0
 >>>>>>> OriolCasals
+=======
+    RecentlyUsedSceneGuid-1:
+      value: 510205545153515a540c0e7047730a444f16197b7b797536297a496ab7b0303c
+      flags: 0
+>>>>>>> Stashed changes
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

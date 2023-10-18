@@ -14,13 +14,13 @@ public class Test : MonoBehaviour
         startPos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void FixedUpdate()
     {
@@ -29,9 +29,10 @@ public class Test : MonoBehaviour
 
         transform.position = new Vector2(startPos + dist, transform.position.y);
 
-        
+
         if (temp > startPos + length) startPos += length;
         else if (temp < startPos - length) startPos -= length;
-        
+
     }
 }
+

@@ -1,49 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoPerosnaje : MonoBehaviour
+public class MovimientoPersonaje : MonoBehaviour
 {
-    public float fuerzaSalto = 5.0f;
-    private Animator _animator;
-    private Rigidbody2D _rb;
-    private SpriteRenderer _sr;
-    private bool enElAire = false;
-    public KeyCode teclaSalto = KeyCode.UpArrow;
-    // Start is called before the first frame update
+    public float velocidadMovimiento = 5.0f;
+    public float fuerzaSalto = 10.0f;
+    private Rigidbody2D rb;
+    private bool enElSuelo;
+
     void Start()
     {
-        _animator = gameObject.GetComponent<Animator>();
-        _rb = GetComponent<Rigidbody2D>();
-        _sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            _rb.velocity = new Vector2(7, _rb.velocity.y);
-            _animator.SetBool("Mover", true);
-            _sr.flipX = false;
+        // Obtener la entrada del teclado para moverse
+        float movimientoHorizontal = Input.GetAxis("Horizontal");
 
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        // Aplicar movimiento horizontal
+        Vector2 movimiento = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
+        rb.velocity = movimiento;
 
-        {
-            _rb.velocity = new Vector2(-7, _rb.velocity.y);
-            _animator.SetBool("Mover", true);
-            _sr.flipX = true;
-        }
-        if (Input.GetKeyDown(teclaSalto))
-        {
-           
-            _rb.velocity = new Vector2(_rb.velocity.x, fuerzaSalto);
-            _animator.SetBool("Saltar", true);
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            _rb.velocity = Vector2.zero;
-            _animator.SetBool("Mover", false);
-        }
+        // Detectar si el personaje está en el suelo
+        enElSuelo = Physics2D.OverlapCircle(transform.position, 0.1f, LayerMask.GetMask("Suelo"));
 
+        // Saltar cuando se presiona la tecla de flecha arriba
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (enElSuelo)
+            {
+                // Aplicar fuerza de salto solo si el personaje está en el suelo
+                rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            }
+        }
     }
 }

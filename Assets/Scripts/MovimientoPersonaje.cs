@@ -19,21 +19,32 @@ public class MovimientoPersonaje : MonoBehaviour
         // Obtener la entrada del teclado para moverse
         float movimientoHorizontal = Input.GetAxis("Horizontal");
 
-        // Aplicar movimiento horizontal
         Vector2 movimiento = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
         rb.velocity = movimiento;
 
-        // Detectar si el personaje está en el suelo
         
 
         // Saltar cuando se presiona la tecla de flecha arriba
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && enElSuelo == true)
         {
-
-            if (rb.velocity.y < 0)
-            {
+           
                 rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
-            } 
+
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            enElSuelo = true;   
+        }
+       
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            enElSuelo = false;
         }
     }
 }

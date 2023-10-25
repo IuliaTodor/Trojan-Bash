@@ -21,7 +21,6 @@ public class VidasP : MonoBehaviour
     //Ficheros y Archivos Daño 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.tag);
         if (collision.transform.tag == "Enemy") 
         {
             vidas -= 1;

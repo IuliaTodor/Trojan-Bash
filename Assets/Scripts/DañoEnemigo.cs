@@ -7,7 +7,7 @@ public class DañoPersonaje : MonoBehaviour
     private Vector3 origin;
     //public AudioClip sonidoDaño; // Asigna el clip de audio en el Inspector
     //private AudioSource audioSource;
-    
+ 
 
     private void Start()
     {

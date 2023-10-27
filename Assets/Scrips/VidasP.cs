@@ -10,6 +10,7 @@ public class VidasP : MonoBehaviour
     void Start()
     {
         vidas = 3;
+        ultimaColl = null;
     }
 
     // Update is called once per frame
@@ -30,6 +31,8 @@ public class VidasP : MonoBehaviour
             vidas -= 1;
             ultimaColl = collision.gameObject;
         }
+        //Si el jugador se encuentra atrapado entre la camara y un obstáculo a
+        //los obstaculos se les quita el box collider
         if (ultimaColl.tag == "MainCamera" && collision.transform.tag == "Enemy") 
         {
             GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");

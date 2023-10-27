@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147741405}
   - component: {fileID: 147741404}
+  - component: {fileID: 147741406}
   m_Layer: 0
   m_Name: hand w95
   m_TagString: Enemy
@@ -201,12 +202,25 @@ Transform:
   m_GameObject: {fileID: 147741403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.010048471, w: 0.9999495}
-  m_LocalPosition: {x: 5.337, y: -2.167, z: 0}
+  m_LocalPosition: {x: 12.73, y: -2.02, z: 0}
   m_LocalScale: {x: 4.2697, y: 4.2697, z: 4.2697}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.151}
+--- !u!114 &147741406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147741403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699171a9df773e14eb6adeb2326d1ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
 --- !u!1 &205590361
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &359402181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,7 +989,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f07836ef41722774694fe61321355fd8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2165,7 +2179,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868517145}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 292615760}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1868517145
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class MocimientoBala : MonoBehaviour
     private Camera mainCamera;
     void Start()
     {
+        //hacer que StartPosition sea igual al punto del cursor mano
         startPosition = transform.position;
         mainCamera = Camera.main;
     }

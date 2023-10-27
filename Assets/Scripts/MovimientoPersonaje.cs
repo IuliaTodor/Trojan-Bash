@@ -26,18 +26,18 @@ public class MovimientoPersonaje : MonoBehaviour
         Vector2 movimiento = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
         rb.velocity = movimiento;
 
-        
+        //Salto
         if (Input.GetKeyDown(KeyCode.UpArrow) && enElSuelo)
         {
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
         
+        //Agacharse
         if (Input.GetKeyDown(KeyCode.DownArrow) && enElSuelo)
         {
             boxCollider.enabled = true;
             polygonCollider.enabled = false; 
-        }
-        
+        }        
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             boxCollider.enabled = false; 

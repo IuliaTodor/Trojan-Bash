@@ -20,7 +20,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Update()
     {
-        // Obtener la entrada del teclado para moverse
+
         float movimientoHorizontal = Input.GetAxis("Horizontal");
 
         Vector2 movimiento = new Vector2(movimientoHorizontal * velocidadMovimiento, rb.velocity.y);
@@ -31,17 +31,17 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
-        // Agacharse cuando se presiona la tecla de flecha abajo
+        
         if (Input.GetKeyDown(KeyCode.DownArrow) && enElSuelo)
         {
-            boxCollider.enabled = true; // Desactiva el BoxCollider2D
-            polygonCollider.enabled = false; // Activa el PolygonCollider2D
+            boxCollider.enabled = true;
+            polygonCollider.enabled = false; 
         }
         
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            boxCollider.enabled = false; // Activa el BoxCollider2D
-            polygonCollider.enabled = true; // Desactiva el PolygonCollider2D
+            boxCollider.enabled = false; 
+            polygonCollider.enabled = true;
         }
     }
 

@@ -27,5 +27,4 @@ public class MoveCamera : MonoBehaviour
             cuenta = 0;
         }
     }
-    //Hola
 }

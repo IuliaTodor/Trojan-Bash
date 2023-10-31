@@ -10,7 +10,10 @@ public class BalaRalentizadora : MonoBehaviour
     {
         if (other.gameObject.CompareTag("caballo"))
         {
+<<<<<<< HEAD
             Debug.Log("Entra Primera");
+=======
+>>>>>>> main
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {

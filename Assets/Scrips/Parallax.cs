@@ -25,7 +25,7 @@ public class Test : MonoBehaviour
         float temp = (cam.transform.position.x * (1 - parallaxEfect));
         float dist = (cam.transform.position.x * parallaxEfect);
 
-        transform.position = new Vector2(startPos + dist, transform.position.y);
+        transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
 
 
         if (temp > startPos + length) startPos += length;

@@ -267,6 +267,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8114813294995844164, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      propertyPath: m_BoneTransforms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114813294995844164, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 661933211}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -301,6 +309,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &661933211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3656945907512815765, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+  m_PrefabInstance: {fileID: 661933208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

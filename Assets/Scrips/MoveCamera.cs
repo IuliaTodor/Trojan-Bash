@@ -17,9 +17,9 @@ public class MoveCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.transform.position += new Vector3(velocidad, 0f, 0f);
+        rb.position += new Vector3(velocidad, 0f, 0f);
         cuenta++;
         if (cuenta == tiempo) 
         {

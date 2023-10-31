@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    public float velocidadMovimiento = 5.0f;
+    public float velocidadMovimiento = 8.0f;
     public float fuerzaSalto = 20.0f;
     private Rigidbody2D rb;
     private bool enElSuelo;

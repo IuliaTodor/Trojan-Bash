@@ -3,10 +3,11 @@ using UnityEngine;
 public class MocimientoBala : MonoBehaviour
 {
     public float velocidad = 5.0f;
-    private Vector3 startPosition;
+    public Vector3 startPosition;
     private Camera mainCamera;
     void Start()
     {
+        //hacer que StartPosition sea igual al punto del cursor mano
         startPosition = transform.position;
         mainCamera = Camera.main;
     }
@@ -17,7 +18,7 @@ public class MocimientoBala : MonoBehaviour
 
         if (!IsVisible())
         {
-            Respawn();
+            Destroy(this.gameObject);
         }
     }
 

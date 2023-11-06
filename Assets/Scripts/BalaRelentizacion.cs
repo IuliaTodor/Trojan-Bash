@@ -33,7 +33,7 @@ public class BalaRalentizadora : MonoBehaviour
                 }
             }
         }
-        // Destruye la bala después de la colisión
+        // Destruye la bala despuï¿½s de la colisiï¿½n
         Destroy(gameObject);
     }
 }

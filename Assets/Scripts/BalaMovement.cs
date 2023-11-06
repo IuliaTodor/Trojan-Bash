@@ -3,7 +3,7 @@ using UnityEngine;
 public class MocimientoBala : MonoBehaviour
 {
     public float velocidad = 5.0f;
-    private Vector3 startPosition;
+    public Vector3 startPosition;
     private Camera mainCamera;
     void Start()
     {
@@ -18,7 +18,7 @@ public class MocimientoBala : MonoBehaviour
 
         if (!IsVisible())
         {
-            Respawn();
+            Destroy(this.gameObject);
         }
     }
 

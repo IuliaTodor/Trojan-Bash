@@ -5,7 +5,7 @@ using UnityEngine;
 public class VidasP : MonoBehaviour
 {
     public int vidas;
-    public GameObject ultimaColl;
+    public string ultimaColl;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +29,11 @@ public class VidasP : MonoBehaviour
         if (collision.transform.tag == "MainCamera")
         {
             vidas -= 1;
-            ultimaColl = collision.gameObject;
+            ultimaColl = collision.transform.tag;
         }
         //Si el jugador se encuentra atrapado entre la camara y un obstáculo a
         //los obstaculos se les quita el box collider
-        if (ultimaColl.tag == "MainCamera" && collision.transform.tag == "Enemy") 
+        if (ultimaColl == "MainCamera" && collision.transform.tag == "Enemy") 
         {
             GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (var obj in list)

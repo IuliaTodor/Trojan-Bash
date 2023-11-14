@@ -11,15 +11,17 @@ public class MoveCamera : MonoBehaviour
     public int tiempo;
     private Transform rb;
     private int cuenta;
-    public GameObject score;
     private float multiplicador;
+    public GameObject controlador;
+    private ScoreManager scoreManager;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Transform>();
-        score = GameObject.Find("ControladorPuntos"); //Objeto con el script "ScoreManager.sc"
         multiplicador = 1f;
+        controlador = GameObject.Find("ControladorPuntos");// poner el nobre del objeto que tenga el script "ScoreManager.cs"
+        scoreManager = controlador.GetComponent<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class MoveCamera : MonoBehaviour
     {
         rb.position += new Vector3(velocidad, 0f, 0f);
         cuenta++;
-        if (cuenta == tiempo)
+        if (cuenta >= tiempo) // Cada vez que pasen x frames aumenta la velocidad "cuenta son los frames que han pasado i tiempo es a lo que tiene que llegar" 
         {
             velocidad += aceleracion;
 
@@ -35,11 +37,10 @@ public class MoveCamera : MonoBehaviour
             tiempo--;
         }
         if (cuenta % 50 == 0)// Cada 50 frames sube la puntuacion
-
         {
-            score.GetComponent<ScoreManager>().RaiseScore(Mathf.RoundToInt(1f * multiplicador));
+            scoreManager.RaiseScore(Mathf.RoundToInt(1f * multiplicador));
             multiplicador += 0.1f;
-            Debug.Log(multiplicador);
         }
+        Debug.Log(cuenta);
     }
 }

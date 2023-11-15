@@ -41,6 +41,6 @@ public class MoveCamera : MonoBehaviour
             scoreManager.RaiseScore(Mathf.RoundToInt(1f * multiplicador));
             multiplicador += 0.1f;
         }
-        Debug.Log(cuenta);
+        //Debug.Log(cuenta);
     }
 }

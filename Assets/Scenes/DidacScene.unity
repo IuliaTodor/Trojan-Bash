@@ -1079,7 +1079,7 @@ MonoBehaviour:
   velocidad: 0.02
   aceleracion: 0.001
   tiempo: 1000
-  scoreManager: {fileID: 0}
+  controlador: {fileID: 0}
 --- !u!114 &1565814992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   velocidad: 0.02
   aceleracion: 0.001
   tiempo: 1000
-  scoreManager: {fileID: 0}
+  controlador: {fileID: 0}
 --- !u!1 &1863091145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +1973,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904765911}
   m_CullTransparentMesh: 1
+--- !u!1 &2054104741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054104743}
+  - component: {fileID: 2054104742}
+  m_Layer: 0
+  m_Name: ControladorPuntos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2054104742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054104741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dd03c0d7dc7b648a54e86ee92b285c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 1904765913}
+--- !u!4 &2054104743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054104741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.793754, y: 2.044058, z: -10.385503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1983,5 +2029,6 @@ SceneRoots:
   - {fileID: 1008625559}
   - {fileID: 1344613974}
   - {fileID: 1863091152}
+  - {fileID: 2054104743}
   - {fileID: 1008184045}
   - {fileID: 827488343}

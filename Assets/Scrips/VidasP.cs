@@ -6,58 +6,70 @@ public class VidasP : MonoBehaviour
 {
     public int vidas;
     public string ultimaColl;
-    // Start is called before the first frame update
+    public Animator animator;
+    public int iFrames;
+    private int framesInvencivilidad;
+    // Start is called before the first frame update 
     void Start()
     {
         vidas = 3;
         ultimaColl = null;
+        //animator = GetComponent<Animator>();
+        framesInvencivilidad = 0;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 
     void Update()
     {
-        
+        //animator.SetInteger("Vidas", vidas);
+        if (framesInvencivilidad != 0)
+        {
+            framesInvencivilidad--;
+            //animator.SetInteger("IFrames", framesInvencivilidad);
+        }
     }
 
-    //Ficheros y Archivos Daño 
+    //Ficheros y Archivos Dato  
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Enemy") 
+        if (framesInvencivilidad == 0)
         {
-            vidas -= 1;
-        }
-        if (collision.transform.tag == "MainCamera")
-        {
-            vidas -= 1;
-            ultimaColl = collision.transform.tag;
-        }
-        //Si el jugador se encuentra atrapado entre la camara y un obstáculo a
-        //los obstaculos se les quita el box collider
-        if (ultimaColl == "MainCamera" && collision.transform.tag == "Enemy") 
-        {
-            GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach (var obj in list)
+            if (collision.transform.tag == "Enemy")
             {
-                obj.GetComponent<BoxCollider2D>().enabled = false;
+                vidas -= 1;
+                framesInvencivilidad = iFrames;
+                //animator.SetInteger("IFrames", framesInvencivilidad);
+            }
+            if (collision.transform.tag == "MainCamera")
+            {
+                vidas -= 1;
+                ultimaColl = collision.transform.tag;
+                framesInvencivilidad = iFrames;
+                //animator.SetInteger("IFrames", framesInvencivilidad);
+            }
+            //Si el jugador se encuentra atrapado entre la camara y un obstaculo a 
+            //los obstaculos se les quita el box collider 
+            if (ultimaColl == "MainCamera" && collision.transform.tag == "Enemy")
+            {
+                GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach (var obj in list)
+                {
+                    obj.GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
         }
     }
-
-    //No fuera de pantalla
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "MainCamera")
-        {
-            ultimaColl = null;
-        }
-    }
-
     //Disparos
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Enemy")
+        if (framesInvencivilidad == 0)
         {
-            vidas -= 1;
+            if (collision.transform.tag == "Enemy")
+            {
+                vidas -= 1;
+                framesInvencivilidad = iFrames;
+                //animator.SetInteger("IFrames", framesInvencivilidad);
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bounsX = cam.GetComponent<Camera>().orthographicSize * 2;
+        bounsX = cam.GetComponent<Camera>().orthographicSize * 1.6f;
         timer += Time.deltaTime;
         if (timer >= fercuencia)
         {

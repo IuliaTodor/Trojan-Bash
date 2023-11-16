@@ -407,6 +407,10 @@ PrefabInstance:
       propertyPath: m_BoneTransforms.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 276497557206852440, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.773802
+      objectReference: {fileID: 0}
     - target: {fileID: 390710015392183923, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       propertyPath: m_Name
       value: Cuello_1
@@ -507,7 +511,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2612242033534762983, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
-      insertIndex: -1
+      insertIndex: 33
       addedObject: {fileID: 8620769971320999369}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}

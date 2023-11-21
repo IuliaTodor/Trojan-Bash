@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 22719505}
   - component: {fileID: 22719504}
   - component: {fileID: 22719503}
-  - component: {fileID: 22719502}
   - component: {fileID: 22719507}
+  - component: {fileID: 22719508}
+  - component: {fileID: 22719509}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -144,22 +145,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &22719502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22719501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e805183cb4c86d4ca579bbfdf0686e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 0.1
-  aceleracion: 0.001
-  tiempo: 1000
-  score: {fileID: 0}
 --- !u!61 &22719503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -291,6 +276,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea33f77d924077478fcc1fc149c663f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &22719508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22719501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1dfb4a1bbdbf949aef144e9a595bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 0.1
+  aceleracion: 0.001
+  tiempo: 1000
+--- !u!61 &22719509
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22719501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02775383, y: 5.5229683}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18.92883, y: 0.55594254}
+  m_EdgeRadius: 0
 --- !u!1 &424115192
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +432,7 @@ GameObject:
   - component: {fileID: 666540828}
   - component: {fileID: 666540827}
   - component: {fileID: 666540826}
-  - component: {fileID: 666540825}
+  - component: {fileID: 666540830}
   m_Layer: 0
   m_Name: 'Background '
   m_TagString: Ground
@@ -395,22 +440,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &666540825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666540824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e805183cb4c86d4ca579bbfdf0686e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 0.02
-  aceleracion: 0.001
-  tiempo: 1000
-  score: {fileID: 0}
 --- !u!212 &666540826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -552,6 +581,21 @@ Transform:
   - {fileID: 1302957189}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666540830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666540824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1dfb4a1bbdbf949aef144e9a595bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 0.1
+  aceleracion: 0.001
+  tiempo: 1000
 --- !u!1 &1077495610
 GameObject:
   m_ObjectHideFlags: 0

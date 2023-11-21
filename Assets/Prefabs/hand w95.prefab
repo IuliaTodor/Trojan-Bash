@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1376868705667087713}
   - component: {fileID: 7192573804777732452}
+  - component: {fileID: 4259399605175190304}
   - component: {fileID: 4003029307495909182}
   - component: {fileID: 3059067747050188498}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: hand w95
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -86,6 +87,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4259399605175190304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158434836702318682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56f2cd59ffe6a8478067487360b990c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 3228010316564966551, guid: b7143e994fe1ed549bebc6b4b36625e0, type: 3}
+  actualAngle: 0
 --- !u!61 &4003029307495909182
 BoxCollider2D:
   m_ObjectHideFlags: 0

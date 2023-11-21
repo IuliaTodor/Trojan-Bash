@@ -19,7 +19,7 @@ public class ScoreEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Caballo");//Nombre del Objeto Jugador
+        player = GameObject.Find("ArchivoCaballoCapasPSB");//Nombre del Objeto Jugador
         _tr = player.transform;
         if (puntos == 0) puntos = 25;
         scoreManager = GameObject.Find("ControladorPuntos").GetComponent<ScoreManager>();// poner el nobre del objeto que tenga el script "ScoreManager.cs"

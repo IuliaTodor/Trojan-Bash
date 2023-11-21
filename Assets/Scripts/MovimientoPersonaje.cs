@@ -14,7 +14,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Start()
     {
-       // _animator = gameObject.GetComponent<Animator>();
+        _animator = gameObject.GetComponent<Animator>();
         rb = GetComponent < Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         polygonCollider = GetComponent<PolygonCollider2D>();
@@ -31,20 +31,20 @@ public class MovimientoPersonaje : MonoBehaviour
         //Salto
         if (Input.GetKeyDown(KeyCode.UpArrow) && enElSuelo)
         {
-            //_animator.SetBool("Salto", true);
+            _animator.SetBool("Salto", true);
             rb.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
         }
         
         //Agacharse
         if (Input.GetKeyDown(KeyCode.DownArrow) && enElSuelo)
         {
-            //_animator.SetBool("Agacharse", true);
+            _animator.SetBool("Agacharse", true);
             boxCollider.enabled = true;
             polygonCollider.enabled = false; 
         }        
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            //_animator.SetBool("Agacharse", false);
+            _animator.SetBool("Agacharse", false);
             boxCollider.enabled = false; 
             polygonCollider.enabled = true;
         }
@@ -63,6 +63,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             enElSuelo = false;
+            _animator.SetBool("Salto", false);
         }
     }
 }

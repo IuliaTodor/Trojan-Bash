@@ -1,27 +1,47 @@
+using System;
 using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
     public float velocidad = 5.0f;
-    public Vector3 startPosition;
-    private Camera mainCamera;
+    private Rigidbody2D rb;
+
+    public static BulletMovement bullet;
+    private void Awake()
+    {
+        if (bullet == null)
+        {
+            bullet = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (bullet != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        //hacer que StartPosition sea igual al punto del cursor mano
-        startPosition = transform.position;
-        mainCamera = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = (GetBulletDirection() * velocidad);
     }
 
-    void Update()
+    private Vector3 GetBulletDirection()
     {
-        transform.Translate(Vector3.left * velocidad * Time.deltaTime);
-
+        switch (HandManager.hand.actualAngle)
+        {
+            case 0:
+                return Vector3.up;
+            case 90:
+                return Vector3.left;
+            default: 
+                return Vector3.down;
+        }
     }
 
-    void Respawn()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Reposiciona la bala en la posición inicial.
-        transform.position = startPosition;
+        transform.position = HandManager.hand.gameObject.transform.position;
     }
 }
 

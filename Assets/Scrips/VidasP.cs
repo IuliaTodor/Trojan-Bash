@@ -14,18 +14,18 @@ public class VidasP : MonoBehaviour
     {
         vidas = 3;
         ultimaColl = null;
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         framesInvencivilidad = 0;
     }
 
     // Update is called once per frame 
     void Update()
     {
-        //animator.SetInteger("Vidas", vidas);
+        animator.SetInteger("Vidas", vidas);
         if (framesInvencivilidad != 0)
         {
             framesInvencivilidad--;
-            //animator.SetInteger("IFrames", framesInvencivilidad);
+            animator.SetInteger("IFrames", framesInvencivilidad);
         }
     }
 
@@ -38,14 +38,14 @@ public class VidasP : MonoBehaviour
             {
                 vidas -= 1;
                 framesInvencivilidad = iFrames;
-                //animator.SetInteger("IFrames", framesInvencivilidad);
+                animator.SetInteger("IFrames", framesInvencivilidad);
             }
             if (collision.transform.tag == "MainCamera")
             {
                 vidas -= 1;
                 ultimaColl = collision.transform.tag;
                 framesInvencivilidad = iFrames;
-                //animator.SetInteger("IFrames", framesInvencivilidad);
+                animator.SetInteger("IFrames", framesInvencivilidad);
             }
             //Si el jugador se encuentra atrapado entre la camara y un obstaculo a 
             //los obstaculos se les quita el box collider 
@@ -68,7 +68,7 @@ public class VidasP : MonoBehaviour
             {
                 vidas -= 1;
                 framesInvencivilidad = iFrames;
-                //animator.SetInteger("IFrames", framesInvencivilidad);
+                animator.SetInteger("IFrames", framesInvencivilidad);
             }
         }
     }

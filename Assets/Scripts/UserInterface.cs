@@ -24,7 +24,10 @@ public class MenuController : MonoBehaviour
             gameStarted = true;
         }
     }
-
+    public void Tienda()
+    {
+        gameObject.SetActive(true);
+    }
     public void ExitGame()
     {
         // Sal del juego al modo de edición.

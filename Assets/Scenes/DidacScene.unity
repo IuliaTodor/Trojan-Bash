@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArchivoCaballoCapasPSB
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      propertyPath: m_TagString
+      value: caballo
+      objectReference: {fileID: 0}
     - target: {fileID: -8451486291655107465, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       propertyPath: m_RootBone
       value: 
@@ -393,11 +397,11 @@ PrefabInstance:
       objectReference: {fileID: 1248152783}
     - target: {fileID: -7552582706839291426, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       propertyPath: m_LocalPosition.x
@@ -620,6 +624,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       insertIndex: -1
       addedObject: {fileID: 768016802}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768016804}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 768016803}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
 --- !u!4 &348291911 stripped
 Transform:
@@ -777,7 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 8
-  fuerzaSalto: 20
+  fuerzaSalto: 7
 --- !u!114 &768016797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,7 +803,7 @@ MonoBehaviour:
   vidas: 0
   ultimaColl: 
   animator: {fileID: 0}
-  iFrames: 0
+  iFrames: 120
 --- !u!60 &768016798
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -841,10 +851,10 @@ PolygonCollider2D:
     - - {x: 1.4401283, y: 5.584408}
       - {x: 0.4724865, y: 3.5398402}
       - {x: -2.2471724, y: 3.021259}
-      - {x: -2.6039653, y: 0.103064656}
-      - {x: 1.4518619, y: 0.03105855}
+      - {x: -2.1832433, y: 0.1631676}
+      - {x: 0.45422506, y: 0.22108483}
       - {x: 1.4125214, y: 2.5474825}
-      - {x: 2.9672365, y: 3.7413225}
+      - {x: 2.302146, y: 4.406413}
   m_UseDelaunayMesh: 0
 --- !u!61 &768016799
 BoxCollider2D:
@@ -853,7 +863,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768016795}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -944,6 +954,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &768016803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768016795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7b2c70a9ec7624cb8e069c3f7223aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balaPrefab: {fileID: 0}
+  velocidadBala: 10
+  cooldownEntreDisparos: 1
+--- !u!114 &768016804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768016795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5171cee20af3afc41a849c1361f492fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &800844149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 276497557206852440, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
@@ -1634,7 +1671,7 @@ MonoBehaviour:
   cam: {fileID: 1565814986}
   prefab: {fileID: 8186176212201139638, guid: 5d1fc22995286ba4b89511b12c72c917, type: 3}
   bounsX: 0
-  fercuencia: 2
+  fercuencia: 6
 --- !u!4 &1344613974
 Transform:
   m_ObjectHideFlags: 0
@@ -2148,7 +2185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320, y: 221}
+  m_AnchoredPosition: {x: -379, y: 255.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904765913

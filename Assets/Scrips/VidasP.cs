@@ -9,6 +9,7 @@ public class VidasP : MonoBehaviour
     public Animator animator;
     public int iFrames;
     private int framesInvencivilidad;
+    private Dead dead;
     // Start is called before the first frame update 
     void Start()
     {
@@ -16,6 +17,7 @@ public class VidasP : MonoBehaviour
         ultimaColl = null;
         animator = GetComponent<Animator>();
         framesInvencivilidad = 0;
+        dead = GetComponent<Dead>();
     }
 
     // Update is called once per frame 
@@ -26,6 +28,10 @@ public class VidasP : MonoBehaviour
         {
             framesInvencivilidad--;
             animator.SetInteger("IFrames", framesInvencivilidad);
+        }
+        if (vidas == 0)
+        {
+            dead.Desenable();
         }
     }
 

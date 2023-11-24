@@ -55,6 +55,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             enElSuelo = true;
+            _animator.SetBool("Salto", false);
         }
     }
 
@@ -63,7 +64,7 @@ public class MovimientoPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             enElSuelo = false;
-            _animator.SetBool("Salto", false);
+            
         }
     }
 }

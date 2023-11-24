@@ -24,6 +24,6 @@ public class GameManager : MonoBehaviour
 
     public void SceneChange(string sceneName)
     {
-        SceneManager.LoadScene("a");
+        SceneManager.LoadScene(sceneName);
     }
 }

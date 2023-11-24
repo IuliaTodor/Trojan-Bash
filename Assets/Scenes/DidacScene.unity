@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7b2c70a9ec7624cb8e069c3f7223aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaPrefab: {fileID: 0}
+  balaPrefab: {fileID: 3936177399688802038, guid: e4e1b3e2d1e48c7408149996dc725370, type: 3}
   velocidadBala: 10
   cooldownEntreDisparos: 1
 --- !u!114 &768016804

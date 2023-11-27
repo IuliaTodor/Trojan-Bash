@@ -4,51 +4,70 @@ using UnityEngine;
 
 public class arrowMovement : MonoBehaviour
 {
-    public float actualPosY;
     private float angle;
+    private Vector2 direction;
 
     private Rigidbody2D rb;
+    public static arrowMovement arrow;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        if (arrow == null)
+        {
+            arrow = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (arrow != this)
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetAngleAndDirection();
+        StartCoroutine(Movement());        
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        actualPosY = transform.position.y;
+        if (transform.position.y > 3.01 || transform.position.y < -3.01)
+        {
+            transform.eulerAngles = Vector3.zero;
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private IEnumerator Movement()
     {
-        yield return new WaitForSeconds(Random.Range(0.5f, 2f));
-        if (actualPosY > 0)
-        {
-            RotateArrow(-30);
-            yield return new WaitForSeconds(1);
-            ChangeArrowPosY();
-        }
-        else if (actualPosY < 0)
-        {
-            
-        }
-
+        yield return new WaitForSeconds(Random.Range(0.2f, 1f));
         RotateArrow(angle);
         yield return new WaitForSeconds(1);
-        ChangeArrowPosY();
-
-        ;
+        ChangeArrowPosY(direction);
     }
 
-    private void ChangeArrowPosY()
+    private void ChangeArrowPosY(Vector2 direction)
     {
-        throw new System.NotImplementedException();
+        rb.velocity = direction * 8;
+    }
+    private void GetAngleAndDirection()
+    {
+        if (transform.position.y >= 0)
+        {
+            angle = 30;
+            direction = Vector2.down;
+        }
+        else if (transform.position.y < 0)
+        {
+            angle = -45;
+            direction = Vector2.up;
+        }
     }
 
     private void RotateArrow(float angle)
     {
-        gameObject.transform.eulerAngles = Vector3.forward * angle;
+        transform.eulerAngles = Vector3.forward * angle;
     }
 }

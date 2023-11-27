@@ -9,20 +9,7 @@ public class MenuController : MonoBehaviour
     private string sceneToRestart;
     public void StartGame()
     {
-        if (!gameStarted)
-        {
- 
-            gameObject.SetActive(false);
-
-            // Activa la cámara principal para enfocarse en la escena de juego.
-            if (mainCamera != null)
-            {
-                mainCamera.enabled = true;
-            }
-
-            // Marca el juego como iniciado para evitar volver a mostrar el canvas.
-            gameStarted = true;
-        }
+        GameManager.instance.SceneChange("EscenaFinal");
     }
     public void Tienda()
     {

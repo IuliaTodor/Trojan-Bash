@@ -15,16 +15,16 @@ public class Dead : MonoBehaviour
         background = GameObject.Find("Background ").GetComponent<MoveCamera>();
         //Objetos con SpawnEnemy
         spawn = GameObject.Find("Spawner").GetComponent<SpawnEnemy>();
-        // Desactivamos los scripts
-
     }
 
     // Update is called once per frame
     void Update()
     {
         // Poner pantalla de muerte, la animacion dura 304 frames
+
     }
-    public void Desenable()
+    // Desactivamos los scripts
+    public void Disenable()
     {
         GetComponent<MovimientoPersonaje>().enabled = false;
         GetComponent<ControlDeDisparo>().enabled = false;
@@ -32,4 +32,5 @@ public class Dead : MonoBehaviour
         background.enabled = false;
         spawn.enabled = false;
     }
+
 }

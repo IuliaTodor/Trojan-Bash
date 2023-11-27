@@ -31,7 +31,7 @@ public class VidasP : MonoBehaviour
         }
         if (vidas == 0)
         {
-            dead.Desenable();
+            dead.Disenable();
         }
     }
 
@@ -40,22 +40,18 @@ public class VidasP : MonoBehaviour
     {
         if (framesInvencivilidad == 0)
         {
-            if (collision.transform.tag == "Enemy")
+            if (CompareTag("Enemy"))
             {
-                vidas -= 1;
-                framesInvencivilidad = iFrames;
-                animator.SetInteger("IFrames", framesInvencivilidad);
+                Hurt();
             }
-            if (collision.transform.tag == "MainCamera")
+            if (CompareTag("MainCamera"))
             {
-                vidas -= 1;
+                Hurt();
                 ultimaColl = collision.transform.tag;
-                framesInvencivilidad = iFrames;
-                animator.SetInteger("IFrames", framesInvencivilidad);
             }
             //Si el jugador se encuentra atrapado entre la camara y un obstaculo a 
             //los obstaculos se les quita el box collider 
-            if (ultimaColl == "MainCamera" && collision.transform.tag == "Enemy")
+            if (ultimaColl == "MainCamera" && CompareTag("Enemy"))
             {
                 GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (var obj in list)
@@ -70,12 +66,16 @@ public class VidasP : MonoBehaviour
     {
         if (framesInvencivilidad == 0)
         {
-            if (collision.transform.tag == "Enemy")
+            if (CompareTag("Enemy"))
             {
-                vidas -= 1;
-                framesInvencivilidad = iFrames;
-                animator.SetInteger("IFrames", framesInvencivilidad);
+                Hurt();
             }
         }
+    }
+    private void Hurt()
+    {
+        vidas -= 1;
+        framesInvencivilidad = iFrames;
+        animator.SetInteger("IFrames", framesInvencivilidad);
     }
 }

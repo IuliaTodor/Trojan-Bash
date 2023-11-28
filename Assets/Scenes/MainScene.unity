@@ -1217,7 +1217,7 @@ MonoBehaviour:
   vidas: 0
   ultimaColl: 
   animator: {fileID: 0}
-  iFrames: 0
+  iFrames: 105
 --- !u!61 &870114574
 BoxCollider2D:
   m_ObjectHideFlags: 0

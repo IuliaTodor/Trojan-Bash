@@ -23,7 +23,6 @@ public class ScoreManager : MonoBehaviour
     public void RaiseScore(int s)
     {
         score += s;
-        Debug.Log(score);
         scoreText.text = score.ToString();
     }
 }

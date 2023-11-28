@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56f2cd59ffe6a8478067487360b990c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 0}
+  Bullet: {fileID: 3228010316564966551, guid: b7143e994fe1ed549bebc6b4b36625e0, type: 3}
   actualAngle: 0
 --- !u!61 &4003029307495909182
 BoxCollider2D:

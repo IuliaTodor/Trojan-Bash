@@ -835,6 +835,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       insertIndex: -1
       addedObject: {fileID: 870114571}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870114578}
     - targetCorrespondingSourceObject: {fileID: 2480183082090920076, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
       insertIndex: -1
       addedObject: {fileID: 182756458}
@@ -1338,6 +1341,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
   m_PrefabInstance: {fileID: 63085988}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &870114578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870114570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5171cee20af3afc41a849c1361f492fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &876357495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1630,7 +1645,7 @@ GameObject:
   - component: {fileID: 1093596729}
   - component: {fileID: 1093596728}
   m_Layer: 0
-  m_Name: Spawner (1)
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

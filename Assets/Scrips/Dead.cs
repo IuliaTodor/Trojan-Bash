@@ -30,7 +30,7 @@ public class Dead : MonoBehaviour
     {
         GetComponent<MovimientoPersonaje>().enabled = false;
         GetComponentInChildren<ControlDeDisparo>().enabled = false;
-        camera.enabled = false;
+        GetComponent<Camera>().enabled = false;
         background.enabled = false;
         spawn.enabled = false;
     }

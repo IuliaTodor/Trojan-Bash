@@ -1575,6 +1575,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 43
     width: 1920
@@ -1597,6 +1598,18 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    x: 7.3333335
+    y: 50
+    width: 1265.3334
+    height: 614.6667
+  m_ShowMode: 4
+  m_Title: Game
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 321}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 0
+>>>>>>> IuliaTodor
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1606,15 +1619,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: AnimatorControllerTool
+=======
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+>>>>>>> IuliaTodor
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 505
     height: 385
   m_MinSize: {x: 100, y: 100}
@@ -1624,6 +1647,16 @@ MonoBehaviour:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    width: 1265.3334
+    height: 614.6667
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+>>>>>>> IuliaTodor
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1632,10 +1665,11 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Children:
   - {fileID: 2}
   - {fileID: 4}
@@ -1649,6 +1683,18 @@ MonoBehaviour:
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
   controlID: 104
+=======
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1265.3334
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+>>>>>>> IuliaTodor
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1657,14 +1703,21 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: InspectorWindow
+=======
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+>>>>>>> IuliaTodor
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 385
     width: 505
     height: 562
@@ -1676,6 +1729,13 @@ MonoBehaviour:
   - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    y: 594.6667
+    width: 1265.3334
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> IuliaTodor
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1684,15 +1744,21 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
 =======
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
   m_EditorHideFlags: 1
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+>>>>>>> IuliaTodor
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
   - {fileID: 6}
+<<<<<<< HEAD
   - {fileID: 8}
   - {fileID: 7}
 =======
@@ -1718,6 +1784,19 @@ MonoBehaviour:
   m_UseBottomView: 1
   m_BottomViewHeight: 20
 <<<<<<< HEAD
+=======
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1265.3334
+    height: 564.6667
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 1
+  controlID: 52
+>>>>>>> IuliaTodor
 --- !u!114 &6
 =======
 --- !u!114 &3
@@ -1730,14 +1809,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 8}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1920
 =======
@@ -1748,6 +1831,14 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
 <<<<<<< HEAD
+=======
+    width: 1265.3334
+    height: 306.66666
+  m_MinSize: {x: 300, y: 50}
+  m_MaxSize: {x: 24288, y: 8096}
+  vertical: 0
+  controlID: 53
+>>>>>>> IuliaTodor
 --- !u!114 &7
 =======
 --- !u!114 &4
@@ -1759,14 +1850,15 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 977
     width: 1920
@@ -1855,6 +1947,18 @@ MonoBehaviour:
   vertical: 0
   controlID: 46
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    y: 0
+    width: 252
+    height: 306.66666
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> IuliaTodor
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1864,6 +1968,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -1896,10 +2001,17 @@ MonoBehaviour:
   m_Children:
   - {fileID: 10}
   - {fileID: 13}
+=======
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+>>>>>>> IuliaTodor
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 252
     y: 0
+<<<<<<< HEAD
     width: 1415
     height: 947
   m_MinSize: {x: 200, y: 100}
@@ -1974,6 +2086,19 @@ MonoBehaviour:
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    width: 706.6667
+    height: 306.66666
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 11}
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 1
+>>>>>>> IuliaTodor
 --- !u!114 &9
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
 MonoBehaviour:
@@ -1985,11 +2110,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 269
     y: 0
@@ -2016,8 +2142,20 @@ MonoBehaviour:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 13}
+=======
+    x: 958.6667
+    y: 0
+    width: 306.6667
+    height: 306.66666
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 16}
+>>>>>>> IuliaTodor
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
 MonoBehaviour:
@@ -2027,14 +2165,19 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
   m_Name: ProjectBrowser
+=======
+  m_Name: ConsoleWindow
+>>>>>>> IuliaTodor
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 627
     width: 1415
@@ -2060,6 +2203,19 @@ MonoBehaviour:
   - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
+=======
+    y: 306.66666
+    width: 1265.3334
+    height: 258.00003
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 18}
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> IuliaTodor
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2069,6 +2225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: InspectorWindow
   m_EditorClassIdentifier: 
@@ -2087,6 +2244,97 @@ MonoBehaviour:
   - {fileID: 12}
   m_Selected: 1
   m_LastSelected: 0
+=======
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 259.33334
+    y: 80
+    width: 704.6667
+    height: 285.66666
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 3840, y: 2160}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -1280
+    m_HBaseRangeMax: 1280
+    m_VBaseRangeMin: -720
+    m_VBaseRangeMax: 720
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 704.6667
+      height: 264.66666
+    m_Scale: {x: 0.18379629, y: 0.18379629}
+    m_Translation: {x: 352.33334, y: 132.33333}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -1916.9775
+      y: -720
+      width: 3833.955
+      height: 1440
+    m_MinimalGUI: 1
+  m_defaultScale: 0.18379629
+  m_LastWindowPixelSize: {x: 1057, y: 428.5}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 00000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+>>>>>>> IuliaTodor
 --- !u!114 &12
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
 MonoBehaviour:
@@ -2105,10 +2353,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 73
     width: 268
@@ -2130,6 +2379,12 @@ MonoBehaviour:
     width: 448
     height: 910
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    x: 7.3333335
+    y: 80
+    width: 251
+    height: 285.66666
+>>>>>>> IuliaTodor
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2143,10 +2398,17 @@ MonoBehaviour:
 <<<<<<< HEAD
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: e6650000
       m_LastClickedID: 0
       m_ExpandedIDs: 8c5efeffaee9ffffeee9ffffe8f2ffff8cf6ffff16fbffff86670000
+=======
+      scrollPos: {x: 0, y: 60}
+      m_SelectedIDs: f0faffff
+      m_LastClickedID: -1296
+      m_ExpandedIDs: 98ebfffff0faffff02fbffff12fbffff18fbffff1afbffff2c6100004a6100004e610000606100007c610000
+>>>>>>> IuliaTodor
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2162,7 +2424,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 11}
+=======
+        m_ClientGUIView: {fileID: 7}
+>>>>>>> IuliaTodor
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2194,6 +2460,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -2419,6 +2686,8 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+=======
+>>>>>>> IuliaTodor
   m_EditorHideFlags: 1
   m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -2427,10 +2696,11 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 269
     y: 73
@@ -2442,6 +2712,12 @@ MonoBehaviour:
     width: 1008
     height: 619
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    x: 259.33334
+    y: 80
+    width: 704.6667
+    height: 285.66666
+>>>>>>> IuliaTodor
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2482,7 +2758,11 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
+<<<<<<< HEAD
       snapOffset: {x: 0, y: 25}
+=======
+      snapOffset: {x: 0, y: 24.666666}
+>>>>>>> IuliaTodor
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -2508,7 +2788,11 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
+<<<<<<< HEAD
       snapOffset: {x: 0, y: 25}
+=======
+      snapOffset: {x: 0, y: 24.666666}
+>>>>>>> IuliaTodor
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2534,9 +2818,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapOffset: {x: 67.5, y: -40.666664}
+      snapOffsetDelta: {x: 0, y: 0.0000076293945}
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -2788,6 +3072,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 3.6190438, y: -1.140904, z: -0.058624938}
     speed: 2
     m_Value: {x: 3.6190438, y: -1.140904, z: -0.058624938}
@@ -2796,6 +3081,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -2.03904, y: -0.68186474, z: -10.298612}
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    m_Target: {x: 2045.1538, y: 933.3155, z: -14.257329}
+    speed: 2
+    m_Value: {x: 2045.1538, y: 933.3155, z: -14.257329}
+>>>>>>> IuliaTodor
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2846,6 +3136,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 8.094298
     speed: 2
     m_Value: 8.094298
@@ -2854,6 +3145,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 6.6150837
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    m_Target: 1271.8871
+    speed: 2
+    m_Value: 1271.8871
+>>>>>>> IuliaTodor
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2879,10 +3175,13 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &18
 =======
 --- !u!114 &17
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2890,18 +3189,90 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+    x: 198.66667
+    y: 72.66667
+    width: 538
+    height: 264.33334
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -5347568457966915797, guid: 56c31ccec674032419f757a067211226, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.18603176
+      e01: 0
+      e02: 0
+      e03: 47.999985
+      e10: 0
+      e11: 0.18603176
+      e12: 0
+      e13: 54.06667
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 56c31ccec674032419f757a067211226, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -5347568457966915797, guid: 56c31ccec674032419f757a067211226, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 0
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &15
+>>>>>>> IuliaTodor
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 415
     y: 73
@@ -2913,6 +3284,12 @@ MonoBehaviour:
     width: 1009
     height: 619
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    x: 966
+    y: 80
+    width: 305.6667
+    height: 285.66666
+>>>>>>> IuliaTodor
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -2923,6 +3300,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
+<<<<<<< HEAD
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
@@ -3024,6 +3402,56 @@ MonoBehaviour:
 =======
 --- !u!114 &18
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -151
+    m_ControlHash: 1412526313
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &16
+>>>>>>> IuliaTodor
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f683d99f24875748a6656966ca9cea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 240, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Tile Palette
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 738.6667
+    y: 72.66667
+    width: 540.3333
+    height: 57
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3039,10 +3467,11 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 700
@@ -3054,6 +3483,12 @@ MonoBehaviour:
     width: 1453
     height: 270
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    x: 7.3333335
+    y: 386.6667
+    width: 1265.3334
+    height: 237.00003
+>>>>>>> IuliaTodor
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3076,10 +3511,14 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
 =======
     - Assets/Scrips
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    - Assets/ScriptsIulia
+>>>>>>> IuliaTodor
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -3087,6 +3526,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: -1
@@ -3110,6 +3550,18 @@ MonoBehaviour:
     m_LastClickedID: 26076
     m_ExpandedIDs: 00000000ce65000000ca9a3b
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+  - Assets/ScriptsIulia
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\Colli\Trojan Bash
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 70.99997}
+    m_SelectedIDs: c4620000
+    m_LastClickedID: 25284
+    m_ExpandedIDs: 000000009262000000ca9a3bffffff7f
+>>>>>>> IuliaTodor
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3126,10 +3578,14 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 13}
 =======
       m_ClientGUIView: {fileID: 10}
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> IuliaTodor
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -3142,10 +3598,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000008a6500008c650000
 =======
     m_ExpandedIDs: 00000000ce650000
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+    m_ExpandedIDs: 0000000092620000
+>>>>>>> IuliaTodor
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3170,8 +3630,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 80faffff
+    m_LastClickedInstanceID: -1408
     m_HadKeyboardFocusLastEvent: 1
 <<<<<<< HEAD
     m_ExpandedInstanceIDs: c62300000ea6000044610000b66000009e600000a0600000
@@ -3194,10 +3654,14 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 13}
 =======
       m_ClientGUIView: {fileID: 10}
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> IuliaTodor
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -3208,12 +3672,17 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
+<<<<<<< HEAD
   m_DirectoriesAreaWidth: 207
 <<<<<<< HEAD
 --- !u!114 &20
 =======
 --- !u!114 &19
 >>>>>>> dc17893128dad4bc29c7283e118734719ab769cc
+=======
+  m_DirectoriesAreaWidth: 129
+--- !u!114 &18
+>>>>>>> IuliaTodor
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3229,6 +3698,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
+<<<<<<< HEAD
     m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3325,6 +3795,16 @@ MonoBehaviour:
     y: 73
     width: 585
     height: 926
+=======
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 7.3333335
+    y: 386.6667
+    width: 1265.3334
+    height: 237.00003
+>>>>>>> IuliaTodor
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

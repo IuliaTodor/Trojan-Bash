@@ -52,7 +52,7 @@ public class ShopManager : MonoBehaviour
         {
             if(bytes >= shopPowerUps[i].cost)
             {
-               
+                purchaseBtn[i].interactable = true;
             }
 
             else

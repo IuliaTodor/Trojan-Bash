@@ -7,7 +7,14 @@ public class ControlDeDisparo : MonoBehaviour
     public float cooldownEntreDisparos = 1f;
     public float timeWAait = 111;
 
+    private Animator _an;
+
     private float tiempoUltimoDisparo;
+
+    private void Start()
+    {
+        _an = GetComponentInParent<Animator>();
+    }
 
     void Update()
     {
@@ -15,6 +22,7 @@ public class ControlDeDisparo : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && Time.time > tiempoUltimoDisparo + cooldownEntreDisparos)
         {
             Disparar();
+            _an.SetBool("Disparo", true);
         }
         
     }

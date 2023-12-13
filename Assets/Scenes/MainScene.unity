@@ -1039,6 +1039,7 @@ MonoBehaviour:
   balaPrefab: {fileID: 3936177399688802038, guid: e4e1b3e2d1e48c7408149996dc725370, type: 3}
   velocidadBala: 17
   cooldownEntreDisparos: 1
+  timeWAait: 111
 --- !u!4 &447203526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6995986299624538070, guid: 225e7a04aeb4085469a3cab11e1ab208, type: 3}
@@ -1814,6 +1815,7 @@ GameObject:
   - component: {fileID: 1149511601}
   - component: {fileID: 1149511600}
   - component: {fileID: 1149511599}
+  - component: {fileID: 1149511602}
   m_Layer: 0
   m_Name: ControladorPuntos
   m_TagString: Untagged
@@ -1864,6 +1866,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149511602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149511598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4419806596ef349a57ea90ed8e5fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1171648732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3936177399688802038, guid: e4e1b3e2d1e48c7408149996dc725370, type: 3}

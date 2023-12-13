@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    public float musicVolume;
+    public float efectVolume;
 
     void Awake()
     {
@@ -36,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("MainMenu");
+        //Play("MainMenu");
 
     }
     public void Play(string name)
@@ -72,6 +74,6 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(musicVolume);
     }
 }

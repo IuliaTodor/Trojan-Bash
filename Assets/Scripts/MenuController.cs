@@ -10,6 +10,12 @@ public class MenuController : MonoBehaviour
     {
         GameManager.instance.SceneChange("MainScene");
     }
+
+    public void Settings()
+    {
+        GameManager.instance.SceneChange("Settings");
+    }
+
     public void Tienda()
     {
         GameManager.instance.SceneChange("Shop");

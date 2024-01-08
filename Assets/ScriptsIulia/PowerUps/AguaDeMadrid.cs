@@ -6,4 +6,11 @@ using UnityEngine;
 public class AguaDeMadrid : PowerUp
 {
     public int bytesMultiplier;
+
+    public override bool ApplyPowerUpEffect()
+    {
+        Debug.Log("activado power up");
+        ScoreManager.instance.score += bytesMultiplier;
+        return true;
+    }
 }

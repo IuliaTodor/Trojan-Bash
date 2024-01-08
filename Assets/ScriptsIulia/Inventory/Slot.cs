@@ -1,19 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+public enum SlotInteraction
+{
+    Click,
+    ApplyEffect,
+    Remove
+}
 public class Slot : MonoBehaviour
 {
+    public static Action<SlotInteraction, int> slotInterationEvent;
     public int index;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Image icon;
+
+    public void UpdateSlotUI(PowerUp powerUp)
     {
-        
+        icon.sprite = powerUp.image;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSlotActive(bool state)
     {
-        
+        icon.gameObject.SetActive(state);
+    }
+
+    public void ClickSlot()
+    {
+        if(slotInterationEvent != null)
+        {
+            slotInterationEvent.Invoke(SlotInteraction.Click, index);
+        }
     }
 }

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ShopTemplate : MonoBehaviour
 {
-    public TMP_Text titleText;
-    public TMP_Text costText;
-    public TMP_Text descriptionText;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI costText;
+    public TextMeshProUGUI descriptionText;
     public Image image;
 }

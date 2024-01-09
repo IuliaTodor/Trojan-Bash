@@ -9,23 +9,23 @@ public class TestSlider : MonoBehaviour
     public Slider efectSlider;
     public AudioManager audioManager;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        audioManager = GameObject.Find("Test").GetComponent<AudioManager>();//Donde pone Test poner el nombre del Objeto con el componente AudioManager
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();//Donde pone Test poner el nombre del Objeto con el componente AudioManager
         Slider[] sliders = GetComponentsInChildren<Slider>();
         musicSlider = sliders[0];
-        musicSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        musicSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(musicSlider.value); });
         efectSlider = sliders[1];
-        efectSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        efectSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(efectSlider.value); });
     }
 
     // Update is called once per frame
-    void ValueChangeCheck()
+    void ValueChangeCheck(float value)
     {
         if (audioManager != null)
         {
-            audioManager.musicVolume = musicSlider.value;
-            audioManager.efectVolume = efectSlider.value;
+            
+            audioManager.ChangeVolumenMusic(value);
         }
     }
 }

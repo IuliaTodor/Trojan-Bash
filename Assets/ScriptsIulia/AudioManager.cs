@@ -74,6 +74,13 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(musicVolume);
+
+    }
+    public void ChangeVolumenMusic(float volum)
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.volume = sound.volume * volum;
+        }
     }
 }

@@ -864,6 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec3f7b00e1e1c445b9642e9fdb9fdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dieEnemy: 4
 --- !u!1 &4050343991419069508
 GameObject:
   m_ObjectHideFlags: 0

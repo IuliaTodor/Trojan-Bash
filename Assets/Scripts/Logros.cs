@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Logros : MonoBehaviour
 {
@@ -7,25 +9,32 @@ public class Logros : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de que este script esté en el mismo GameObject que ScoreManager o encuentra la referencia de otra manera.
         scoreManager = GetComponent<ScoreManager>();
         logroDesbloqueado = false;
     }
-
+    //ESTO DEBERIA FUNCIONAR TODO PERO FALTAN COSILLAS TIPO EL ENEMIGO Y OTRAS PERO GNO LUEGO LO RETOCO Y FALTA PONER LO DELA TIENDA DE CUANDO COJA OBJEYOS SE PONGAN
     void Update()
     {
         // Accede al puntaje desde ScoreManager y verifica si se deben desbloquear logros
         int puntajeActual = scoreManager.score;
-
-        if (puntajeActual >= 1000 && !logroDesbloqueado)
+        int enemigosMuertos = DestroyEnemy.DestroyEn.dieEnemy;
+        bool bossMuerto = DestroyEnemy.DestroyEn.boss;
+        bool hasBeenPurcharsed = ShopManager.instance.allPowerUpsPurchased;
+        if (puntajeActual >= 10000 && !logroDesbloqueado)
         {
-            DesbloquearLogro("Logro Desbloqueado");
-            logroDesbloqueado = true;
+            SceneManager.LoadScene("DavidScene");
         }
-    }
-
-    void DesbloquearLogro(string nombreLogro)
-    {
-        Debug.Log($"Logro Desbloqueado: {nombreLogro}");
+        if (enemigosMuertos >= 20 && !logroDesbloqueado)
+        {
+            SceneManager.LoadScene("DavidScene");
+        }
+        if (hasBeenPurcharsed != false)
+        {
+            SceneManager.LoadScene("DavidScene");
+        }
+        //if (bossMuerto == true && !logroDesbloqueado)
+        //{
+        //    SceneManager.LoadScene("DavidScene");
+        //}
     }
 }

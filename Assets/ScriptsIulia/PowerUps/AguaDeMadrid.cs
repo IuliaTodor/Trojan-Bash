@@ -10,7 +10,7 @@ public class AguaDeMadrid : PowerUp
     public override bool ApplyPowerUpEffect()
     {
         Debug.Log("activado power up");
-        ScoreManager.instance.score += bytesMultiplier;
+        ScoreManager.instance.score *= bytesMultiplier;
         return true;
     }
 }

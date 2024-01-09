@@ -43,7 +43,7 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < powerUps.Length; i++)
         {
             shopPanels[i].titleText.text = powerUps[i].name;
-            shopPanels[i].costText.text = powerUps[i].cost.ToString() + " bytes";
+            shopPanels[i].costText.text = powerUps[i].cost.ToString() + " B";
             shopPanels[i].image.sprite = powerUps[i].image;
             shopPanels[i].descriptionText.text = powerUps[i].description;
         }

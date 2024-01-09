@@ -19,7 +19,7 @@ public class Logros : MonoBehaviour
         int puntajeActual = scoreManager.score;
         int enemigosMuertos = DestroyEnemy.DestroyEn.dieEnemy;
         bool bossMuerto = DestroyEnemy.DestroyEn.boss;
-        bool hasBeenPurcharsed = ShopManager.instance.allPowerUpsPurchased;
+        //bool hasBeenPurcharsed = ShopManager.instance.allPowerUpsPurchased;
         if (puntajeActual >= 10000 && !logroDesbloqueado)
         {
             SceneManager.LoadScene("DavidScene");
@@ -28,10 +28,10 @@ public class Logros : MonoBehaviour
         {
             SceneManager.LoadScene("DavidScene");
         }
-        if (hasBeenPurcharsed != false)
-        {
-            SceneManager.LoadScene("DavidScene");
-        }
+        //if (hasBeenPurcharsed != false)
+        //{
+        //    SceneManager.LoadScene("DavidScene");
+        //}
         //if (bossMuerto == true && !logroDesbloqueado)
         //{
         //    SceneManager.LoadScene("DavidScene");

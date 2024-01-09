@@ -27,4 +27,9 @@ public class MenuController : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void MainMenu()
+    {
+        GameManager.instance.SceneChange("MainMenu");
+    }
 }

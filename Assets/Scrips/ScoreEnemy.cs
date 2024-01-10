@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -34,7 +35,8 @@ public class ScoreEnemy : MonoBehaviour
             Vector3 pos = obj.transform.position;
             if (pos.x < _tr.position.x)
             {
-                obj.GetComponent<BoxCollider2D>().enabled = false;
+                obj.GetComponent<BoxCollider2D>().isTrigger = true;
+                obj.GetComponent<SpriteRenderer>().color = Color.gray;
                 scoreManager.RaiseScore(puntos);
                 obj.tag = "Corrupto";
                 Debug.Log("Funciona");

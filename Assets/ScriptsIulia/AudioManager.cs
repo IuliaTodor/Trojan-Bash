@@ -43,12 +43,12 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //Play("MainMenu");
+        Play("TestMusic");
 
     }
     public void Play(string name)
     {
-        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        Sound sound = Array.Find(music, sound => sound.name == name);
         if (sound == null)
         {
             Debug.Log("Sound: " + sound.name + " not found");

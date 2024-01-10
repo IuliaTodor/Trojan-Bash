@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class VidasP : MonoBehaviour
 {
+    public static event Action<Color> ChangeColor = delegate { };
     public int vidas;
     public string ultimaColl;
     public Animator animator;
@@ -80,11 +82,22 @@ public class VidasP : MonoBehaviour
         vidas -= 1;
         framesInvencivilidad = iFrames;
         animator.SetInteger("IFrames", framesInvencivilidad);
-        if(vidas == 0)
+        switch (vidas)
         {
-            SceneManager.LoadScene("GameOver");
+            case 0:
+                SceneManager.LoadScene("GameOver");
+                break;
+            case 1:
+                ChangeColor.Invoke(Color.red);
+                //VidasFeedback.instance.ShowLifesFeedback(Color.red);
+                break; 
+            case 2:
+                ChangeColor.Invoke(new Color(1f, 0.5938594f,0f));
+                //VidasFeedback.instance.ShowLifesFeedback(Color.yellow);
+                break; 
         }
     }
+
 
     
 }

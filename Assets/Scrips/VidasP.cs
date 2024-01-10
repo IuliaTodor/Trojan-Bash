@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VidasP : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class VidasP : MonoBehaviour
     public int iFrames;
     private int framesInvencivilidad;
     private Dead dead;
+    public static VidasP vid;
     // Start is called before the first frame update 
     void Start()
     {
@@ -78,5 +80,11 @@ public class VidasP : MonoBehaviour
         vidas -= 1;
         framesInvencivilidad = iFrames;
         animator.SetInteger("IFrames", framesInvencivilidad);
+        if(vidas == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
+
+    
 }

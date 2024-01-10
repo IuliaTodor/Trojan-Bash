@@ -11,6 +11,8 @@ public class ShopManager : MonoBehaviour
     public ShopTemplate[] shopPanels;
     public GameObject[] shopPanelsGO; //La referencia al prefab en lugar del script
     public Button[] purchaseBtn;
+    public bool allPowerUpsPurchased;
+    public static ShopManager shp;
 
     // Start is called before the first frame update
     void Start()
@@ -82,5 +84,17 @@ public class ShopManager : MonoBehaviour
             Inventory.instance.AddPowerUp(powerUps[btnNum]);
             
         }
+        foreach(PowerUp powerUp in powerUps)
+        {
+            if(powerUp.hasBeenPurchased == false)
+            {
+                allPowerUpsPurchased = false;
+            }
+            
+            
+        }
+        
     }
+
+    
 }

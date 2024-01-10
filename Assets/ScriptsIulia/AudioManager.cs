@@ -6,9 +6,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public Sound[] music;
     public static AudioManager instance;
-    public float musicVolume;
-    public float efectVolume;
+
 
     void Awake()
     {
@@ -24,7 +24,13 @@ public class AudioManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound sound in sounds)
+        SetAudioParameters(sounds);
+        SetAudioParameters(music);
+
+    }
+    private void SetAudioParameters(Sound[] array)
+    {
+        foreach (Sound sound in array)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
@@ -33,7 +39,6 @@ public class AudioManager : MonoBehaviour
             sound.source.pitch = sound.pitch;
             sound.source.loop = sound.loop;
         }
-
     }
 
     private void Start()
@@ -76,11 +81,25 @@ public class AudioManager : MonoBehaviour
     {
 
     }
-    public void ChangeVolumenMusic(float volum)
+    public void ChangeVolumen(float volum, int id)
     {
-        foreach (Sound sound in sounds)
+        switch (id)
         {
-            sound.source.volume = sound.volume * volum;
+            case 0:
+                foreach (Sound sound in sounds)
+                {
+                    sound.source.volume = sound.volume * volum;
+                }
+                break;
+            case 1:
+                foreach (Sound sound in music)
+                {
+                    sound.source.volume = sound.volume * volum;
+                }
+                break;
+            default:
+                break;
         }
+
     }
 }

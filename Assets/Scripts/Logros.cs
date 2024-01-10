@@ -16,7 +16,7 @@ public class Logros : MonoBehaviour
     void Update()
     {
         // Accede al puntaje desde ScoreManager y verifica si se deben desbloquear logros
-        int puntajeActual = scoreManager.score;
+        int puntajeActual = GameManager.instance.bytes;
         int enemigosMuertos = DestroyEnemy.DestroyEn.dieEnemy;
         bool bossMuerto = DestroyEnemy.DestroyEn.boss;
         //bool hasBeenPurcharsed = ShopManager.instance.allPowerUpsPurchased;

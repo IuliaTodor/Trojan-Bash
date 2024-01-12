@@ -16,14 +16,29 @@ public class DataManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("caballo");
     }
 
-    private void SaveData()
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            LoadData();
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SaveData();
+        }
+
+    }
+
+    private void LoadData()
     {
         if(File.Exists(SaveFiles))
         {
             string content = File.ReadAllText(SaveFiles);
-            gameData = JsonUtility.FromJson<GameData>(content); //Convierte el Json en algo leíble
-
-            Debug.Log(gameData.bytes);
+            Debug.Log(content);
+            GameData gameData2 = JsonUtility.FromJson<GameData>(content); //Convierte el Json en algo leíble
+            
+            gameData.bytes = gameData2.bytes;
+            Debug.Log("Game data bytes " + gameData.bytes);
         }
 
         else
@@ -32,9 +47,19 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    private void LoadData()
+    private void SaveData()
     {
-        GameData gameData = new GameData();
+        GameData newData = new GameData();
+        {
+          newData.bytes = GameManager.instance.bytes;
+        };
+
+        string JsonString = JsonUtility.ToJson(newData);
+
+        File.WriteAllText(SaveFiles, JsonString);
+
+        Debug.Log("Saved File");
+  
     }
 
 

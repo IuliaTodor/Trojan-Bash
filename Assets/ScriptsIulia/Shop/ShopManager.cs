@@ -77,8 +77,6 @@ public class ShopManager : MonoBehaviour
             bytesUI.text = "Bytes: " + GameManager.instance.bytes.ToString();
             CheckPurchaseable();
 
-            powerUps[btnNum].hasBeenPurchased = true;
-
             Inventory.instance.AddPowerUp(powerUps[btnNum]);
             
         }

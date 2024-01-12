@@ -6,6 +6,16 @@ public class MenuController : MonoBehaviour
 {
 
     //public Camera mainCamera; // Asigna la cámara principal desde el Inspector.
+
+    private void Start()
+    {
+        Debug.Log(GameManager.instance.bytes);
+    }
+    private void Update()
+    {
+        Debug.Log("Dentro del menú: " + GameManager.instance.bytes);
+    }
+
     public void StartGame()
     {
         GameManager.instance.SceneChange("MainScene");

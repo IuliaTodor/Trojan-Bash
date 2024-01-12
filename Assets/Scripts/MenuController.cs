@@ -30,6 +30,6 @@ public class MenuController : MonoBehaviour
 
     public void MainMenu()
     {
-        GameManager.instance.SceneChange("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

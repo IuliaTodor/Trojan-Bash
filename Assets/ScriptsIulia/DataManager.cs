@@ -5,20 +5,24 @@ using System.IO;
 
 public class DataManager : MonoBehaviour
 {
-    public GameObject player;
+    public static DataManager instance;
     public string SaveFiles;
     public GameData gameData = new GameData();
 
     private void Awake()
     {
-        SaveFiles = Application.dataPath + "/GameData.json"; //La localización de la carpeta donde están las SaveFiles
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
-        player = GameObject.FindGameObjectWithTag("caballo");
+        SaveFiles = Application.persistentDataPath + "/GameData.json"; //La localización de la carpeta donde están las SaveFiles
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             LoadData();
         }
@@ -28,19 +32,26 @@ public class DataManager : MonoBehaviour
         }
 
     }
-
-    private void LoadData()
+    [RuntimeInitializeOnLoadMethod]
+    public void LoadData()
     {
-        if(File.Exists(SaveFiles))
+        if (File.Exists(SaveFiles))
         {
             string content = File.ReadAllText(SaveFiles);
             Debug.Log(content);
-            GameData gameData2 = JsonUtility.FromJson<GameData>(content); //Convierte el Json en algo leíble
-            
-            gameData.bytes = gameData2.bytes;
-            Debug.Log("Game data bytes " + gameData.bytes);
-        }
+            GameData loadedData = JsonUtility.FromJson<GameData>(content);
 
+            // Copy values from loadedData to the existing gameData
+            gameData.bytes = loadedData.bytes;
+            GameManager.instance.bytes = gameData.bytes;
+            if (Inventory.instance != null)
+            {
+                Inventory.instance.powerUps = gameData.powerUps;
+            }
+
+
+            Debug.Log("Inventory: " + gameData.powerUps);
+        }
         else
         {
             Debug.Log("El archivo de guardado no existe");
@@ -51,7 +62,12 @@ public class DataManager : MonoBehaviour
     {
         GameData newData = new GameData();
         {
-          newData.bytes = GameManager.instance.bytes;
+            newData.bytes = GameManager.instance.bytes;
+            if (Inventory.instance != null)
+            {
+                newData.powerUps = Inventory.instance.powerUps;
+            }
+
         };
 
         string JsonString = JsonUtility.ToJson(newData);
@@ -59,7 +75,7 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(SaveFiles, JsonString);
 
         Debug.Log("Saved File");
-  
+
     }
 
 

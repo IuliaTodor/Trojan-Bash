@@ -8,12 +8,13 @@ using UnityEditor;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    //public int score;
+    public int score;
     public TMP_Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
         instance= this;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -23,7 +24,8 @@ public class ScoreManager : MonoBehaviour
     }
     public void RaiseScore(int s)
     {
+        score += s;
         GameManager.instance.bytes += s;
-        scoreText.text = GameManager.instance.bytes.ToString();
+        scoreText.text = score.ToString();
     }
 }

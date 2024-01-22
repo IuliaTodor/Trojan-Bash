@@ -15,7 +15,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] public Slot slot;
     [SerializeField] private Transform container; //El lugar donde se instancian los slots
 
-    private List<Slot> slots = new List<Slot>();
+    public List<Slot> slots = new List<Slot>();
 
     public static InventoryUI instance;
 

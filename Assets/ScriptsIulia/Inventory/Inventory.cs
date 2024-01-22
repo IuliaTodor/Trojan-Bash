@@ -11,7 +11,14 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] public PowerUp[] powerUps;
 
-    // Start is called before the first frame update
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //}
     void Start()
     {
         instance = this;

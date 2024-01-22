@@ -41,16 +41,20 @@ public class DataManager : MonoBehaviour
             Debug.Log(content);
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
 
-            // Copy values from loadedData to the existing gameData
             gameData.bytes = loadedData.bytes;
+            gameData.powerUps = loadedData.powerUps;
+            gameData.slots = loadedData.slots;
+            
             GameManager.instance.bytes = gameData.bytes;
             if (Inventory.instance != null)
             {
                 Inventory.instance.powerUps = gameData.powerUps;
+                InventoryUI.instance.slots = gameData.slots;
             }
 
 
             Debug.Log("Inventory: " + gameData.powerUps);
+            Debug.Log("Slots: " + gameData.slots);
         }
         else
         {
@@ -58,7 +62,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    private void SaveData()
+    public void SaveData()
     {
         GameData newData = new GameData();
         {
@@ -66,8 +70,8 @@ public class DataManager : MonoBehaviour
             if (Inventory.instance != null)
             {
                 newData.powerUps = Inventory.instance.powerUps;
+                newData.slots = InventoryUI.instance.slots;
             }
-
         };
 
         string JsonString = JsonUtility.ToJson(newData);

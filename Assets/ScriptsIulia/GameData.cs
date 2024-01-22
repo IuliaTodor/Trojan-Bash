@@ -9,4 +9,5 @@ public class GameData
 {
     public int bytes;
     public PowerUp[] powerUps;
+    public List<Slot> slots;
 }

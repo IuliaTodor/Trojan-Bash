@@ -11,7 +11,6 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] public PowerUp[] powerUps;
 
-    // Start is called before the first frame update
     void Start()
     {
         instance = this;
@@ -26,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     public void AddPowerUp(PowerUp powerUp)
     {
-        for(int i = 0; i < powerUps.Length; i++)
+        for (int i = 0; i < powerUps.Length; i++)
         {
             if (powerUps[i] == null) //Así no se sobreescriben los PowerUp
             {

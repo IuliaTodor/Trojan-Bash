@@ -19,6 +19,15 @@ public class InventoryUI : MonoBehaviour
 
     public static InventoryUI instance;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Start()
     {
         instance = this;

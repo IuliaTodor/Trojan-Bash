@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
@@ -38,23 +39,43 @@ public class DataManager : MonoBehaviour
         if (File.Exists(SaveFiles))
         {
             string content = File.ReadAllText(SaveFiles);
-            Debug.Log(content);
+            Debug.Log("JSON Content: " + content);
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
+
+            //_____________________________________________________________
 
             gameData.bytes = loadedData.bytes;
             gameData.powerUps = loadedData.powerUps;
-            gameData.slots = loadedData.slots;
-            
+            gameData.images = loadedData.images;
+
+            //_____________________________________________________________
+
             GameManager.instance.bytes = gameData.bytes;
+
             if (Inventory.instance != null)
             {
                 Inventory.instance.powerUps = gameData.powerUps;
-                InventoryUI.instance.slots = gameData.slots;
+
+                for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
+                {
+                    if (InventoryUI.instance.slots[i] != null)
+                    {
+                        Debug.Log("se actualizó unu");
+                        Debug.Log("i" + i);
+                        Debug.Log("Length " + Inventory.instance.powerUps.Length);
+                        InventoryUI.instance.slots[i].UpdateSlotUI(Inventory.instance.powerUps[i]);
+                       
+                        if (i > Inventory.instance.powerUps.Length)
+                        {
+                            Debug.Log(i);
+                            Debug.Log(Inventory.instance.powerUps.Length);
+                            return;
+                        }
+                    }
+                }
             }
 
-
-            Debug.Log("Inventory: " + gameData.powerUps);
-            Debug.Log("Slots: " + gameData.slots);
+            Debug.Log("Inventory Game Data: " + gameData.powerUps);
         }
         else
         {
@@ -67,10 +88,22 @@ public class DataManager : MonoBehaviour
         GameData newData = new GameData();
         {
             newData.bytes = GameManager.instance.bytes;
+
             if (Inventory.instance != null)
             {
                 newData.powerUps = Inventory.instance.powerUps;
-                newData.slots = InventoryUI.instance.slots;
+                newData.images = new List<Sprite>();
+                
+
+                Debug.Log("Slots count: " + InventoryUI.instance.slots.Count);
+
+                for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
+                {
+                    Debug.Log("Imagen slot: " + InventoryUI.instance.slots[i].icon.sprite);
+
+                    newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
+                    newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
+                }
             }
         };
 
@@ -79,8 +112,5 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(SaveFiles, JsonString);
 
         Debug.Log("Saved File");
-
     }
-
-
 }

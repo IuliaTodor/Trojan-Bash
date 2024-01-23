@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 629.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6c610000
-      m_LastClickedID: 24940
-      m_ExpandedIDs: 1afbfffff4ffffff
+      m_SelectedIDs: 940d0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 16dbffff96dcffff7edffffffee0ffff1afbfffff4ffffff3e6900006c69000094690000f26a0000206b0000486b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1032,7 +1032,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 24940
+  m_LastSelectedObjectID: -9462
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1144,7 +1144,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 46
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -1229,7 +1229,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ScriptsIulia
+    - Assets/ScriptsIulia/Inventory
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1237,15 +1237,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ScriptsIulia
+  - Assets/ScriptsIulia/Inventory
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Colli\Trojan Bash
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 136.33334}
-    m_SelectedIDs: 92620000
-    m_LastClickedID: 25234
+    m_SelectedIDs: a8620000
+    m_LastClickedID: 25256
     m_ExpandedIDs: 00000000906200009262000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0

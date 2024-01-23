@@ -17,15 +17,6 @@ public class MenuController : MonoBehaviour
         DataManager.instance.LoadData();
     }
 
-    private void Start()
-    {
-        Debug.Log(GameManager.instance.bytes);
-    }
-    private void Update()
-    {
-        Debug.Log("Dentro del menú: " + GameManager.instance.bytes);
-    }
-
     public void StartGame()
     {
         GameManager.instance.SceneChange("MainScene");
@@ -38,7 +29,7 @@ public class MenuController : MonoBehaviour
 
     public void Tienda()
     {
-        DataManager.instance.LoadData();
+        
         GameManager.instance.SceneChange("Shop");
     }
     public void ExitGame()

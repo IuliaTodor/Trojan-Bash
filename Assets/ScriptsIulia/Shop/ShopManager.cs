@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class ShopManager : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class ShopManager : MonoBehaviour
     public Button[] purchaseBtn;
     public bool allPowerUpsPurchased;
     public static ShopManager shp;
-
+  
     // Start is called before the first frame update
     void Start()
     {

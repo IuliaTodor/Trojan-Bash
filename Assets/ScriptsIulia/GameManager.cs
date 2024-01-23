@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [DoNotSerialize] public int bytes;
+    [DoNotSerialize] public PowerUp[] powerUps;
 
     private void Awake()
     {
@@ -20,7 +21,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        Debug.Log(DataManager.instance.gameData.powerUps.Length);
+        for(int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
+        {
+            Debug.Log("el pepe");
+        }
     }
 
     public void SceneChange(string sceneName)

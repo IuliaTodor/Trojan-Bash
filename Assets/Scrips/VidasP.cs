@@ -35,8 +35,16 @@ public class VidasP : MonoBehaviour
         }
         if (vidas == 0)
         {
+            StartCoroutine("ChangeToGameOverSceneOnAnimationEnd");
             dead.Disenable();
         }
+    }
+
+    IEnumerator ChangeToGameOverSceneOnAnimationEnd()
+    {
+        Debug.Log("in wait");
+        yield return new WaitForSeconds(3.5f);
+        SceneManager.LoadScene("GameOver");
     }
 
     //Ficheros y Archivos Dato  
@@ -84,9 +92,6 @@ public class VidasP : MonoBehaviour
         animator.SetInteger("IFrames", framesInvencivilidad);
         switch (vidas)
         {
-            case 0:
-                SceneManager.LoadScene("GameOver");
-                break;
             case 1:
                 ChangeColor.Invoke(Color.red);
                 //VidasFeedback.instance.ShowLifesFeedback(Color.red);

@@ -286,6 +286,7 @@ MonoBehaviour:
   DescriptionName: {fileID: 455616760}
   slot: {fileID: -4228849703891685567, guid: 965b7ddecdfe8184c8eed0bddb8f8803, type: 3}
   container: {fileID: 738682169}
+  slots: []
 --- !u!4 &255633927
 Transform:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ GameObject:
   - component: {fileID: 258035725}
   - component: {fileID: 258035724}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ShopCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1993,6 +1994,7 @@ MonoBehaviour:
   - {fileID: 2033469918}
   - {fileID: 1312150095}
   - {fileID: 479456699}
+  allPowerUpsPurchased: 0
 --- !u!1 &1441794058
 GameObject:
   m_ObjectHideFlags: 0

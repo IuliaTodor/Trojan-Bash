@@ -55,21 +55,28 @@ public class DataManager : MonoBehaviour
             if (Inventory.instance != null)
             {
                 Inventory.instance.powerUps = gameData.powerUps;
-
-                for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
+                if (InventoryUI.instance != null)
                 {
-                    if (InventoryUI.instance.slots[i] != null)
+                    for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
                     {
-                        Debug.Log("se actualizó unu");
-                        Debug.Log("i" + i);
-                        Debug.Log("Length " + Inventory.instance.powerUps.Length);
-                        InventoryUI.instance.slots[i].UpdateSlotUI(Inventory.instance.powerUps[i]);
-                       
-                        if (i > Inventory.instance.powerUps.Length)
+                        if (InventoryUI.instance.slots[i] != null)
                         {
-                            Debug.Log(i);
-                            Debug.Log(Inventory.instance.powerUps.Length);
-                            return;
+                            Debug.Log("se actualizó unu");
+                            Debug.Log("i" + i);
+                            Debug.Log("Length " + Inventory.instance.powerUps.Length);
+
+                            //Usa el PowerUp Actual como índice para saber cuantos elementos del array PowerUps tienen scriptable object asignado
+                            PowerUp currentPowerUp = Inventory.instance.powerUps[i];
+
+                            if (currentPowerUp != null)
+                            {
+                                Debug.Log("se actualizó unu");
+                                Debug.Log("i" + i);
+                                Debug.Log("PowerUp: " + currentPowerUp); // You can access properties of the current power-up here
+
+                                // Now, use the i variable as needed, knowing that it corresponds to a slot with a power-up
+                                InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
+                            }
                         }
                     }
                 }
@@ -93,7 +100,7 @@ public class DataManager : MonoBehaviour
             {
                 newData.powerUps = Inventory.instance.powerUps;
                 newData.images = new List<Sprite>();
-                
+
 
                 Debug.Log("Slots count: " + InventoryUI.instance.slots.Count);
 

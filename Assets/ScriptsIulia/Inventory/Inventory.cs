@@ -10,14 +10,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] public static Inventory instance;
 
     [SerializeField] public PowerUp[] powerUps;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+
     void Start()
     {
         instance = this;

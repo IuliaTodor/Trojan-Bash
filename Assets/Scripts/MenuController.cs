@@ -23,6 +23,7 @@ public class MenuController : MonoBehaviour
 
     public void Settings()
     {
+        AudioManager.instance.ChoosePlay("TestEfect", 0);
         GameManager.instance.SceneChange("Settings");
     }
 
@@ -32,7 +33,7 @@ public class MenuController : MonoBehaviour
     }
     public void ExitGame()
     {
-        if(UnityEditor.EditorApplication.isPlaying)
+        if (UnityEditor.EditorApplication.isPlaying)
         {
             Application.Quit();
         }
@@ -41,5 +42,10 @@ public class MenuController : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Achievements()
+    {
+        SceneManager.LoadScene("Achievements");
     }
 }

@@ -8,6 +8,7 @@ public class TestSlider : MonoBehaviour
     public Slider musicSlider;
     public Slider efectSlider;
     public AudioManager audioManager;
+    public static TestSlider instance;
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,12 +18,11 @@ public class TestSlider : MonoBehaviour
         musicSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(musicSlider.value, 1); });
         efectSlider = sliders[1];
         efectSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(efectSlider.value, 0); });
+        instance = this;
     }
 
     private void Update()
     {
-        Debug.Log(musicSlider.value);
-        Debug.Log(efectSlider.value);
     }
 
     // Update is called once per frame

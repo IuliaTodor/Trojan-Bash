@@ -6,6 +6,16 @@ public class MenuController : MonoBehaviour
 {
 
     //public Camera mainCamera; // Asigna la c�mara principal desde el Inspector.
+    public static MenuController instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        DataManager.instance.LoadData();
+    }
 
     private void Start()
     {
@@ -28,7 +38,8 @@ public class MenuController : MonoBehaviour
 
     public void Tienda()
     {
-        GameManager.Instance.SceneChange("Shop");
+        DataManager.instance.LoadData();
+        GameManager.instance.SceneChange("Shop");
     }
     public void ExitGame()
     {
@@ -40,6 +51,7 @@ public class MenuController : MonoBehaviour
 
     public void MainMenu()
     {
+        DataManager.instance.SaveData();
         SceneManager.LoadScene("MainMenu");
     }
 }

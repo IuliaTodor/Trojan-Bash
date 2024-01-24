@@ -46,19 +46,19 @@ public class AudioManager : MonoBehaviour
         Play("TestMusic", music);
 
     }
-    public void ChoosePlay(string name, int id)
-    {
-        switch (id)
-        {
-            case 0:
-                Play(name, sounds);
-                break;
-            case 1:
-                Play(name, music);
-                break;
-            default:
-                break;
-        }
+    public void ChoosePlay(string name, int id)
+    {
+        switch (id)
+        {
+            case 0:
+                Play(name, sounds);
+                break;
+            case 1:
+                Play(name, music);
+                break;
+            default:
+                break;
+        }
     }
     public void Play(string name, Sound[] array)
     {

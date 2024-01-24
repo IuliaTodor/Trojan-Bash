@@ -1106,9 +1106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7a99d6e15eab54783776b3002b8c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   SaveFiles: 
-  gameData: {fileID: 0}
+  gameData:
+    bytes: 0
+    powerUps: []
+    slots: []
 --- !u!4 &1156606788
 Transform:
   m_ObjectHideFlags: 0

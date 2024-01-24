@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     [DoNotSerialize] public int bytes;
+
+    public bool SeDesbloqueo;
+    public bool SeDesbloqueo1;
+    public bool SeDesbloqueo2;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }

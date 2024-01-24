@@ -20,12 +20,12 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Bytes dentro del juego: " + GameManager.instance.bytes);
+        Debug.Log("Bytes dentro del juego: " + GameManager.Instance.bytes);
     }
     public void RaiseScore(int s)
     {
         score += s;
-        GameManager.instance.bytes += s;
+        GameManager.Instance.bytes += s;
         scoreText.text = score.ToString();
     }
 }

@@ -51,7 +51,7 @@ public class DataManager : MonoBehaviour
     {
         GameData newData = new GameData();
         {
-          newData.bytes = GameManager.instance.bytes;
+          newData.bytes = GameManager.Instance.bytes;
         };
 
         string JsonString = JsonUtility.ToJson(newData);

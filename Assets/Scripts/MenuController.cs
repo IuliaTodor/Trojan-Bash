@@ -5,30 +5,30 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
 
-    //public Camera mainCamera; // Asigna la cámara principal desde el Inspector.
+    //public Camera mainCamera; // Asigna la cï¿½mara principal desde el Inspector.
 
     private void Start()
     {
-        Debug.Log(GameManager.instance.bytes);
+        Debug.Log(GameManager.Instance.bytes);
     }
     private void Update()
     {
-        Debug.Log("Dentro del menú: " + GameManager.instance.bytes);
+        Debug.Log("Dentro del menï¿½: " + GameManager.Instance.bytes);
     }
 
     public void StartGame()
     {
-        GameManager.instance.SceneChange("MainScene");
+        GameManager.Instance.SceneChange("MainScene");
     }
 
     public void Settings()
     {
-        GameManager.instance.SceneChange("Settings");
+        GameManager.Instance.SceneChange("Settings");
     }
 
     public void Tienda()
     {
-        GameManager.instance.SceneChange("Shop");
+        GameManager.Instance.SceneChange("Shop");
     }
     public void ExitGame()
     {

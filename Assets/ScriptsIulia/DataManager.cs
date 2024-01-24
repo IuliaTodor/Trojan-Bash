@@ -53,6 +53,8 @@ public class DataManager : MonoBehaviour
             GameManager.instance.bytes = gameData.bytes;
 
             StartCoroutine(LoadInventoryData());
+
+            Debug.Log("Inventory Game Data: " + gameData.powerUps);
         }
         else
         {

@@ -43,7 +43,6 @@ public class DataManager : MonoBehaviour
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
 
             //_____________________________________________________________
-
             gameData.bytes = loadedData.bytes;
             gameData.powerUps = loadedData.powerUps;
             gameData.images = loadedData.images;
@@ -52,35 +51,7 @@ public class DataManager : MonoBehaviour
 
             GameManager.Instance.bytes = gameData.bytes;
 
-            if (Inventory.instance != null)
-            {
-                Inventory.instance.powerUps = gameData.powerUps;
-                if (InventoryUI.instance != null)
-                {
-                    for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
-                    {
-                        if (InventoryUI.instance.slots[i] != null)
-                        {
-                            Debug.Log("se actualiz� unu");
-                            Debug.Log("i" + i);
-                            Debug.Log("Length " + Inventory.instance.powerUps.Length);
-
-                            //Usa el PowerUp Actual como �ndice para saber cuantos elementos del array PowerUps tienen scriptable object asignado
-                            PowerUp currentPowerUp = Inventory.instance.powerUps[i];
-
-                            if (currentPowerUp != null)
-                            {
-                                Debug.Log("se actualiz� unu");
-                                Debug.Log("i" + i);
-                                Debug.Log("PowerUp: " + currentPowerUp); // You can access properties of the current power-up here
-
-                                // Now, use the i variable as needed, knowing that it corresponds to a slot with a power-up
-                                InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
-                            }
-                        }
-                    }
-                }
-            }
+            StartCoroutine(LoadInventoryData());
 
             Debug.Log("Inventory Game Data: " + gameData.powerUps);
         }
@@ -119,5 +90,32 @@ public class DataManager : MonoBehaviour
         File.WriteAllText(SaveFiles, JsonString);
 
         Debug.Log("Saved File");
+    }
+
+    IEnumerator LoadInventoryData()
+    {
+        while (Inventory.instance == null)
+        {
+            yield return null;
+        }
+
+        Inventory.instance.powerUps = gameData.powerUps;
+
+        if (InventoryUI.instance != null)
+        {
+            for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
+            {
+                if (InventoryUI.instance.slots[i] != null)
+                {
+                    PowerUp currentPowerUp = Inventory.instance.powerUps[i];
+
+                    if (currentPowerUp != null)
+                    {
+                        InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
+                    }
+                }
+            }
+        }
+
     }
 }

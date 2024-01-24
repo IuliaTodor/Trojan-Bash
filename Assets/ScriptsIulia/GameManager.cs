@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [DoNotSerialize] public int bytes;
+    [DoNotSerialize] public PowerUp[] powerUps;
 
     public bool SeDesbloqueo;
     public bool SeDesbloqueo1;
@@ -24,7 +25,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        for(int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
+        {
+            Debug.Log("el pepe");
+        }
     }
 
     public void SceneChange(string sceneName)

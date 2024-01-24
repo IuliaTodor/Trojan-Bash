@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class ShopManager : MonoBehaviour
 {
@@ -13,11 +15,11 @@ public class ShopManager : MonoBehaviour
     public Button[] purchaseBtn;
     public bool allPowerUpsPurchased;
     public static ShopManager shp;
-
+  
     // Start is called before the first frame update
     void Start()
     {
-        //Para que solo aparezcan los que tienen algún Power Up asignado
+        //Para que solo aparezcan los que tienen algï¿½n Power Up asignado
         for (int i = 0; i < powerUps.Length; i++)
         {
             shopPanelsGO[i].SetActive(true);
@@ -55,9 +57,9 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < powerUps.Length; i++)
         {
-            if (GameManager.Instance.bytes >= powerUps[i].cost && !powerUps[i].hasBeenPurchased)
+            if (GameManager.instance.bytes >= powerUps[i].cost)
             {
-                purchaseBtn[i].interactable = true;
+                purchaseBtn[i].interactable = true;   
             }
             else
             {
@@ -78,6 +80,8 @@ public class ShopManager : MonoBehaviour
             GameManager.Instance.bytes -= powerUps[btnNum].cost;
             bytesUI.text = "Bytes: " + GameManager.Instance.bytes.ToString();
             CheckPurchaseable();
+            purchaseBtn[btnNum].interactable = false;
+            powerUps[btnNum].hasBeenPurchased = true;
 
             Inventory.instance.AddPowerUp(powerUps[btnNum]);
             
@@ -87,9 +91,7 @@ public class ShopManager : MonoBehaviour
             if(powerUp.hasBeenPurchased == false)
             {
                 allPowerUpsPurchased = false;
-            }
-            
-            
+            }        
         }
         
     }

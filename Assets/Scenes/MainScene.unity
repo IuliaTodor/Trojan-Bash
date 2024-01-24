@@ -2023,6 +2023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1093596729}
   - component: {fileID: 1093596728}
+  - component: {fileID: 1093596730}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2064,6 +2065,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093596730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093596727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0c98d19b9cb114fba8b2aa343e2e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObjects:
+  - {fileID: 4216119488518189643, guid: bf6335bbfa5613043afa4e8f10835f1c, type: 3}
+  - {fileID: 5032998193425777294, guid: d8cdef6e824399a4fa06fead8cbb2735, type: 3}
+  cam: {fileID: 1398329376}
+  camBoundsX: 0
+  fercuencia: 2
 --- !u!1 &1103205028
 GameObject:
   m_ObjectHideFlags: 0

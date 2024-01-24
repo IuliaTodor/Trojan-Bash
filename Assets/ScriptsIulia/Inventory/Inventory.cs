@@ -15,12 +15,13 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
         powerUps = new PowerUp[slotsNumber];
+        DataManager.instance.LoadData();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void AddPowerUp(PowerUp powerUp)

@@ -11,11 +11,9 @@ public class Creditos : MonoBehaviour
     public void Active()
     {
         credit.SetActive(true);
-        Debug.Log("Hi");
     }
     public void NotActive()
     {
         credit.SetActive(false);
-        Debug.Log("KMS");
     }
 }

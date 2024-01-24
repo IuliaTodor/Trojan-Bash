@@ -37,7 +37,7 @@ public class ShopManager : MonoBehaviour
 
     public void AddBytes()
     {
-        GameManager.Instance.bytes += 100;
+        GameManager.Instance.bytes += 1000;
         bytesUI.text = "Bytes: " + GameManager.Instance.bytes.ToString();
         CheckPurchaseable();
     }

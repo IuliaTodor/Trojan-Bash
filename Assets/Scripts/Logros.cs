@@ -11,7 +11,7 @@ public class Logros : MonoBehaviour
     {
         scoreManager = GetComponent<ScoreManager>();
         dm = GameObject.Find("BichoProyectil").GetComponent<DestroyEnemy>();
-        sm = GameObject.Find("Shop").GetComponent<ShopManager>();
+        //sm = GameObject.Find("Shop").GetComponent<ShopManager>();
     }
 
     void Update()
@@ -19,13 +19,14 @@ public class Logros : MonoBehaviour
         // Accede al puntaje desde ScoreManager y verifica si se deben desbloquear logros
         int puntajeActual = GameManager.Instance.bytes;
         int enemigosMuertos = dm.dieEnemy;
-
-        if (puntajeActual >= 10000 && !logroDesbloqueado)
+        Debug.Log(GameManager.Instance.SeDesbloqueo1);
+        if (puntajeActual >= 10000 && !GameManager.Instance.SeDesbloqueo)
         {
             GameManager.Instance.SeDesbloqueo = true;
+
         }
 
-        if (enemigosMuertos >= 20 && !GameManager.Instance.SeDesbloqueo1)
+        if (enemigosMuertos >= 5 && !GameManager.Instance.SeDesbloqueo1)
         {
             GameManager.Instance.SeDesbloqueo1 = true;
         }

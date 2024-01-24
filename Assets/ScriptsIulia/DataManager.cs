@@ -50,17 +50,21 @@ public class DataManager : MonoBehaviour
             gameData.images = loadedData.images;
 
             gameData.sliderMusicValue = loadedData.sliderMusicValue;
+            gameData.sliderSFXValue = loadedData.sliderSFXValue;
+
+            gameData.logroPuntos = loadedData.logroPuntos;
+            gameData.logroMatar = loadedData.logroMatar;
 
             //_____________________________________________________________
 
             GameManager.Instance.bytes = gameData.bytes;
-            if (TestSlider.instance != null)
-            {
-                TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;
-            }
 
 
+
+            StartCoroutine(LoadSound());
+            StartCoroutine(LoadAchievements());
             StartCoroutine(LoadInventoryData());
+            
         }
         else
         {
@@ -89,7 +93,18 @@ public class DataManager : MonoBehaviour
             if (TestSlider.instance != null)
             {
                 newData.sliderMusicValue = TestSlider.instance.musicSlider.value;
+                newData.sliderSFXValue = TestSlider.instance.efectSlider.value;
             }
+
+            if(TestSlider.instance == null)
+            {
+                newData.sliderMusicValue = 0.5f;
+                newData.sliderSFXValue = 0.5f;
+            }
+
+            newData.logroPuntos = GameManager.Instance.SeDesbloqueo;
+            newData.logroMatar = GameManager.Instance.SeDesbloqueo1;
+
         };
 
         string JsonString = JsonUtility.ToJson(newData);
@@ -106,8 +121,6 @@ public class DataManager : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("game data" + gameData.powerUps.Length);
-        Debug.Log("inventory" + Inventory.instance.powerUps.Length);
         if(gameData.powerUps.Length != 0)
         {
             Inventory.instance.powerUps = gameData.powerUps;
@@ -128,6 +141,27 @@ public class DataManager : MonoBehaviour
                 }
             }
         }
-
     }
+
+    IEnumerator LoadSound()
+    {
+        if (TestSlider.instance != null)
+        {
+            TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;
+            TestSlider.instance.efectSlider.value = gameData.sliderSFXValue;
+        }
+
+
+        yield return true;
+    }
+
+    IEnumerator LoadAchievements()
+    {
+            GameManager.Instance.SeDesbloqueo = gameData.logroPuntos;
+            GameManager.Instance.SeDesbloqueo1 = gameData.logroMatar;
+
+        yield return true;
+    }
+
+
 }

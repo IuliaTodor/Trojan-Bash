@@ -19,7 +19,7 @@ public class ShowAchivement : MonoBehaviour
 
     private void EnableAchivement()
     {
-        sprite = gameObject.AddComponent<SpriteRenderer>();
+        sprite = gameObject.GetComponent<SpriteRenderer>();
         sprite.enabled = true;
     }
 }

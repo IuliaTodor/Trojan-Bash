@@ -48,6 +48,7 @@ public class MenuController : MonoBehaviour
     public void MainMenu()
     {
         DataManager.instance.SaveData();
+        Debug.Log("Guardado");
         SceneManager.LoadScene("MainMenu");
     }
 

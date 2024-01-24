@@ -15,12 +15,13 @@ public class ScoreManager : MonoBehaviour
     {
         instance= this;
         score = 0;
+        GameManager.Instance.bytes = 9990;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Bytes dentro del juego: " + GameManager.Instance.bytes);
+
     }
     public void RaiseScore(int s)
     {

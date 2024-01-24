@@ -33,6 +33,7 @@ public class Dead : MonoBehaviour
         _camera.enabled = false;
         background.enabled = false;
         spawn.enabled = false;
+        DataManager.instance.SaveData();
     }
 
 }

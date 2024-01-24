@@ -2647,7 +2647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0.1
-  aceleracion: 0.001
+  aceleracion: 0.015
   tiempo: 1000
   controlador: {fileID: 0}
 --- !u!61 &1398329379

@@ -71,8 +71,13 @@ public class DataManager : MonoBehaviour
                 newData.powerUps = Inventory.instance.powerUps;
                 newData.images = new List<Sprite>();
 
+
+                Debug.Log("Slots count: " + InventoryUI.instance.slots.Count);
+
                 for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
                 {
+                    Debug.Log("Imagen slot: " + InventoryUI.instance.slots[i].icon.sprite);
+
                     newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
                     newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
                 }

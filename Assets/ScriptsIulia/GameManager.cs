@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(DataManager.instance.gameData.powerUps.Length);
         for(int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
         {
             Debug.Log("el pepe");

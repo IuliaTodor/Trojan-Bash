@@ -23,13 +23,11 @@ public class Logros : MonoBehaviour
         if (puntajeActual >= 10000 && !logroDesbloqueado)
         {
             GameManager.Instance.SeDesbloqueo = true;
-            SceneManager.LoadScene("DavidScene");
         }
 
         if (enemigosMuertos >= 20 && !GameManager.Instance.SeDesbloqueo1)
         {
             GameManager.Instance.SeDesbloqueo1 = true;
-            SceneManager.LoadScene("DavidScene");
         }
 
     }

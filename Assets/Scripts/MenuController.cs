@@ -29,13 +29,13 @@ public class MenuController : MonoBehaviour
     public void Settings()
     {
         AudioManager.instance.ChoosePlay("TestEfect", 0);
-        GameManager.instance.SceneChange("Settings");
+        GameManager.Instance.SceneChange("Settings");
     }
 
     public void Tienda()
     {
         DataManager.instance.LoadData();
-        GameManager.instance.SceneChange("Shop");
+        GameManager.Instance.SceneChange("Shop");
     }
     public void ExitGame()
     {

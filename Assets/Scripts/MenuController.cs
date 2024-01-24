@@ -23,19 +23,21 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.instance.StopPlaying("MusicMenu");
+        AudioManager.instance.ChoosePlay("MusicGame", 1);
         GameManager.Instance.SceneChange("MainScene");
     }
 
     public void Settings()
     {
         AudioManager.instance.ChoosePlay("TestEfect", 0);
-        GameManager.instance.SceneChange("Settings");
+        GameManager.Instance.SceneChange("Settings");
     }
 
     public void Tienda()
     {
         DataManager.instance.LoadData();
-        GameManager.instance.SceneChange("Shop");
+        GameManager.Instance.SceneChange("Shop");
     }
     public void ExitGame()
     {
@@ -47,6 +49,8 @@ public class MenuController : MonoBehaviour
 
     public void MainMenu()
     {
+        AudioManager.instance.StopPlaying("MusicGame");
+        AudioManager.instance.ChoosePlay("MusicMenu", 1);
         DataManager.instance.SaveData();
         SceneManager.LoadScene("MainMenu");
     }

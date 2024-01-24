@@ -721,6 +721,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - name: Disparo
+    clip: {fileID: 8300000, guid: 4d028731caf138d499d54c4dad2b2452, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
   music:
   - name: TestMusic
     clip: {fileID: 8300000, guid: 89ac8794897bb784e8e79adfcf76e093, type: 3}
@@ -728,6 +734,18 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - name: MusicGame
+    clip: {fileID: 8300000, guid: 74ab03812067653429d4496ce96ef4aa, type: 3}
+    volume: 0.71
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: MusicMenu
+    clip: {fileID: 8300000, guid: ddefeb972e88395428ee793e4e8a4662, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
 --- !u!4 &481398627
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,7 +1128,7 @@ MonoBehaviour:
   gameData:
     bytes: 0
     powerUps: []
-    slots: []
+    images: []
 --- !u!4 &1156606788
 Transform:
   m_ObjectHideFlags: 0
@@ -1289,6 +1307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bytes: 0
+  SeDesbloqueo: 0
+  SeDesbloqueo1: 0
+  SeDesbloqueo2: 0
 --- !u!4 &1601044547
 Transform:
   m_ObjectHideFlags: 0

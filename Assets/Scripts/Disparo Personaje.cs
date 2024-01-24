@@ -30,6 +30,7 @@ public class ControlDeDisparo : MonoBehaviour
 
     void Disparar()
     {
+        AudioManager.instance.ChoosePlay("Disparo",0);
         GameObject bala = Instantiate(balaPrefab, transform.position, Quaternion.identity);
 
        

@@ -50,7 +50,7 @@ public class DataManager : MonoBehaviour
 
             //_____________________________________________________________
 
-            GameManager.instance.bytes = gameData.bytes;
+            GameManager.Instance.bytes = gameData.bytes;
 
             if (Inventory.instance != null)
             {
@@ -94,7 +94,7 @@ public class DataManager : MonoBehaviour
     {
         GameData newData = new GameData();
         {
-            newData.bytes = GameManager.instance.bytes;
+            newData.bytes = GameManager.Instance.bytes;
 
             if (Inventory.instance != null)
             {

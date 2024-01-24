@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("TestMusic", music);
+        Play("MusicMenu", music);
 
     }
     public void ChoosePlay(string name, int id)
@@ -79,7 +79,7 @@ public class AudioManager : MonoBehaviour
 
     public void StopPlaying(string sound)
     {
-        Sound s = Array.Find(sounds, item => item.name == sound);
+        Sound s = Array.Find(music, item => item.name == sound);
 
         if (s == null)
         {

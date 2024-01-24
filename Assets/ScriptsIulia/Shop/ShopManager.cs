@@ -57,9 +57,9 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < powerUps.Length; i++)
         {
-            if (GameManager.instance.bytes >= powerUps[i].cost && !powerUps[i].hasBeenPurchased)
+            if (GameManager.instance.bytes >= powerUps[i].cost)
             {
-                purchaseBtn[i].interactable = true;
+                purchaseBtn[i].interactable = true;   
             }
             else
             {
@@ -80,6 +80,8 @@ public class ShopManager : MonoBehaviour
             GameManager.instance.bytes -= powerUps[btnNum].cost;
             bytesUI.text = "Bytes: " + GameManager.instance.bytes.ToString();
             CheckPurchaseable();
+            purchaseBtn[btnNum].interactable = false;
+            powerUps[btnNum].hasBeenPurchased = true;
 
             Inventory.instance.AddPowerUp(powerUps[btnNum]);
             
@@ -89,9 +91,7 @@ public class ShopManager : MonoBehaviour
             if(powerUp.hasBeenPurchased == false)
             {
                 allPowerUpsPurchased = false;
-            }
-            
-            
+            }        
         }
         
     }

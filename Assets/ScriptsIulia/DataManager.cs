@@ -43,7 +43,6 @@ public class DataManager : MonoBehaviour
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
 
             //_____________________________________________________________
-
             gameData.bytes = loadedData.bytes;
             gameData.powerUps = loadedData.powerUps;
             gameData.images = loadedData.images;

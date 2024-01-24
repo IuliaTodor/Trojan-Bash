@@ -25,7 +25,6 @@ public class MenuController : MonoBehaviour
 
     public void Tienda()
     {
-        
         GameManager.instance.SceneChange("Shop");
     }
     public void ExitGame()

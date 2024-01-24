@@ -19,6 +19,12 @@ public class TestSlider : MonoBehaviour
         efectSlider.onValueChanged.AddListener(delegate { ValueChangeCheck(efectSlider.value, 0); });
     }
 
+    private void Update()
+    {
+        Debug.Log(musicSlider.value);
+        Debug.Log(efectSlider.value);
+    }
+
     // Update is called once per frame
     void ValueChangeCheck(float value, int id)
     {

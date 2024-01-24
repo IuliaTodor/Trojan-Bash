@@ -24,7 +24,7 @@ public class ShopManager : MonoBehaviour
         }
         LoadPowerUps();
         CheckPurchaseable();
-        bytesUI.text = "Bytes: " + GameManager.instance.bytes.ToString();
+        bytesUI.text = "Bytes: " + GameManager.Instance.bytes.ToString();
     }
 
     // Update is called once per frame
@@ -35,8 +35,8 @@ public class ShopManager : MonoBehaviour
 
     public void AddBytes()
     {
-        GameManager.instance.bytes += 100;
-        bytesUI.text = "Bytes: " + GameManager.instance.bytes.ToString();
+        GameManager.Instance.bytes += 100;
+        bytesUI.text = "Bytes: " + GameManager.Instance.bytes.ToString();
         CheckPurchaseable();
     }
 
@@ -55,7 +55,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < powerUps.Length; i++)
         {
-            if (GameManager.instance.bytes >= powerUps[i].cost && !powerUps[i].hasBeenPurchased)
+            if (GameManager.Instance.bytes >= powerUps[i].cost && !powerUps[i].hasBeenPurchased)
             {
                 purchaseBtn[i].interactable = true;
             }
@@ -73,10 +73,10 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseItem(int btnNum)
     {
-        if (GameManager.instance.bytes >= powerUps[btnNum].cost)
+        if (GameManager.Instance.bytes >= powerUps[btnNum].cost)
         {
-            GameManager.instance.bytes -= powerUps[btnNum].cost;
-            bytesUI.text = "Bytes: " + GameManager.instance.bytes.ToString();
+            GameManager.Instance.bytes -= powerUps[btnNum].cost;
+            bytesUI.text = "Bytes: " + GameManager.Instance.bytes.ToString();
             CheckPurchaseable();
 
             Inventory.instance.AddPowerUp(powerUps[btnNum]);

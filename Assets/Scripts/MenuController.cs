@@ -14,16 +14,16 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(GameManager.instance.bytes);
+        Debug.Log(GameManager.Instance.bytes);
     }
     private void Update()
     {
-        Debug.Log("Dentro del men�: " + GameManager.instance.bytes);
+        Debug.Log("Dentro del men�: " + GameManager.Instance.bytes);
     }
 
     public void StartGame()
     {
-        GameManager.instance.SceneChange("MainScene");
+        GameManager.Instance.SceneChange("MainScene");
     }
 
     public void Settings()

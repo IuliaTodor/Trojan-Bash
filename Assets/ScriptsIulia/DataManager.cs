@@ -18,7 +18,7 @@ public class DataManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        SaveFiles = Application.persistentDataPath + "/GameData.json"; //La localización de la carpeta donde están las SaveFiles
+        SaveFiles = Application.persistentDataPath + "/GameData.json"; //La localizaciï¿½n de la carpeta donde estï¿½n las SaveFiles
     }
 
     private void Update()
@@ -61,16 +61,16 @@ public class DataManager : MonoBehaviour
                     {
                         if (InventoryUI.instance.slots[i] != null)
                         {
-                            Debug.Log("se actualizó unu");
+                            Debug.Log("se actualizï¿½ unu");
                             Debug.Log("i" + i);
                             Debug.Log("Length " + Inventory.instance.powerUps.Length);
 
-                            //Usa el PowerUp Actual como índice para saber cuantos elementos del array PowerUps tienen scriptable object asignado
+                            //Usa el PowerUp Actual como ï¿½ndice para saber cuantos elementos del array PowerUps tienen scriptable object asignado
                             PowerUp currentPowerUp = Inventory.instance.powerUps[i];
 
                             if (currentPowerUp != null)
                             {
-                                Debug.Log("se actualizó unu");
+                                Debug.Log("se actualizï¿½ unu");
                                 Debug.Log("i" + i);
                                 Debug.Log("PowerUp: " + currentPowerUp); // You can access properties of the current power-up here
 

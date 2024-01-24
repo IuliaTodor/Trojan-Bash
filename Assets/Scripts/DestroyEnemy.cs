@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    public static DestroyEnemy DestroyEn;
+    //public static DestroyEnemy DestroyEn;
     public int dieEnemy = 0;
-    public bool boss = false;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,6 @@ public class DestroyEnemy : MonoBehaviour
             Destroy(gameObject);
           
         }
-        //if (collision.gameObject.CompareTag("Boss"))
-        //{
-        //    boss = true;
-        //}
     }
     // Update is called once per frame
     void Update()

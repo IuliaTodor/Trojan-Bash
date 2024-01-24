@@ -10,6 +10,8 @@ TagManager:
   - Desplegable
   - Corrupto
   - bicho
+  - TrofeoPuntos
+  - TrofeoMuerte
   layers:
   - Default
   - TransparentFX

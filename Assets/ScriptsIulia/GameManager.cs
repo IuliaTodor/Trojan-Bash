@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
 
     public bool SeDesbloqueo;
     public bool SeDesbloqueo1;
-    public bool SeDesbloqueo2;
 
     private void Awake()
     {

@@ -57,7 +57,7 @@ public class ShopManager : MonoBehaviour
     {
         for (int i = 0; i < powerUps.Length; i++)
         {
-            if (GameManager.instance.bytes >= powerUps[i].cost)
+            if (GameManager.Instance.bytes >= powerUps[i].cost)
             {
                 purchaseBtn[i].interactable = true;   
             }

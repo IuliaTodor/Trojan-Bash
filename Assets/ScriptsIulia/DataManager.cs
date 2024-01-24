@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
     public string SaveFiles;
     public GameData gameData = new GameData();
+
 
     private void Awake()
     {
@@ -47,13 +49,18 @@ public class DataManager : MonoBehaviour
             gameData.powerUps = loadedData.powerUps;
             gameData.images = loadedData.images;
 
+            gameData.sliderMusicValue = loadedData.sliderMusicValue;
+
             //_____________________________________________________________
 
             GameManager.Instance.bytes = gameData.bytes;
+            if (TestSlider.instance != null)
+            {
+                TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;
+            }
+
 
             StartCoroutine(LoadInventoryData());
-
-            Debug.Log("Inventory Game Data: " + gameData.powerUps);
         }
         else
         {
@@ -72,16 +79,16 @@ public class DataManager : MonoBehaviour
                 newData.powerUps = Inventory.instance.powerUps;
                 newData.images = new List<Sprite>();
 
-
-                Debug.Log("Slots count: " + InventoryUI.instance.slots.Count);
-
                 for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
                 {
-                    Debug.Log("Imagen slot: " + InventoryUI.instance.slots[i].icon.sprite);
-
                     newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
                     newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
                 }
+            }
+
+            if (TestSlider.instance != null)
+            {
+                newData.sliderMusicValue = TestSlider.instance.musicSlider.value;
             }
         };
 
@@ -99,7 +106,12 @@ public class DataManager : MonoBehaviour
             yield return null;
         }
 
-        Inventory.instance.powerUps = gameData.powerUps;
+        Debug.Log("game data" + gameData.powerUps.Length);
+        Debug.Log("inventory" + Inventory.instance.powerUps.Length);
+        if(gameData.powerUps.Length != 0)
+        {
+            Inventory.instance.powerUps = gameData.powerUps;
+        }
 
         if (InventoryUI.instance != null)
         {

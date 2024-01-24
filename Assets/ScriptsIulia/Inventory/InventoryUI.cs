@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -10,18 +11,29 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private GameObject inventoryPanelDescription;
     [SerializeField] private TextMeshProUGUI DescriptionText;
     [SerializeField] private TextMeshProUGUI DescriptionName;
+    private GameObject Canvas;
 
 
     [SerializeField] public Slot slot;
     [SerializeField] private Transform container; //El lugar donde se instancian los slots
 
-    private List<Slot> slots = new List<Slot>();
+    public List<Slot> slots = new List<Slot>();
 
     public static InventoryUI instance;
+
+
 
     void Start()
     {
         instance = this;
+        //Si se van a perder estos componentes entre escenas no tiene sentido que sea Dontdestroyonload. 
+        //Es mejor establecer estos componentes desde el código
+        Canvas = GameObject.Find("ShopCanvas");
+        inventoryPanel = Canvas.transform.GetChild(2).gameObject;
+        inventoryPanelDescription = inventoryPanel.transform.GetChild(0).gameObject;
+        DescriptionText = inventoryPanelDescription.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        DescriptionName = inventoryPanelDescription.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        Debug.Log(inventoryPanel.name);
         LoadInventory();
     }
 

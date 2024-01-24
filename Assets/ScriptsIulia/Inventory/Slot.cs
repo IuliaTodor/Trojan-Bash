@@ -14,11 +14,12 @@ public class Slot : MonoBehaviour
 {
     public static Action<SlotInteraction, int> slotInterationEvent;
     public int index;
-    [SerializeField] private Image icon;
+    [SerializeField] public Image icon;
 
     public void UpdateSlotUI(PowerUp powerUp)
     {
         icon.sprite = powerUp.image;
+
     }
 
     public void SetSlotActive(bool state)
@@ -28,7 +29,7 @@ public class Slot : MonoBehaviour
 
     public void ClickSlot()
     {
-        if(slotInterationEvent != null)
+        if (slotInterationEvent != null)
         {
             slotInterationEvent.Invoke(SlotInteraction.Click, index);
         }

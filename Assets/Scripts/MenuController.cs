@@ -9,11 +9,6 @@ public class MenuController : MonoBehaviour
     public static MenuController instance;
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
         DataManager.instance.LoadData();
     }
 

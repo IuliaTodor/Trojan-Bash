@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d0ed1b6564b6342a5de5c2a1162815, type: 3}
   m_Name: AguaDeMadrid
   m_EditorClassIdentifier: 
-  ID: AguaMadrid
+  ID: AguaDeMadrid
   PowerUpName: Agua de Madrid
   description: Aumenta los puntos obtenidos por 2
   image: {fileID: 21300000, guid: 7b63c10936252444384f4109b18f8a76, type: 3}

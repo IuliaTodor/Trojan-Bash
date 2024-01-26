@@ -105,6 +105,13 @@ public class DataManager : MonoBehaviour
             newData.logroPuntos = GameManager.Instance.SeDesbloqueo;
             newData.logroMatar = GameManager.Instance.SeDesbloqueo1;
 
+            GameManager.Instance.powerUps = new PowerUp[newData.powerUps.Length];
+
+            for (int i = 0; i < newData.powerUps.Length; i++)
+            {
+                GameManager.Instance.powerUps[i] = newData.powerUps[i];
+            }
+
         };
 
         string JsonString = JsonUtility.ToJson(newData);

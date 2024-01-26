@@ -84,6 +84,7 @@ public class ShopManager : MonoBehaviour
             powerUps[btnNum].hasBeenPurchased = true;
 
             Inventory.instance.AddPowerUp(powerUps[btnNum]);
+            DataManager.instance.SaveData();
             
         }
         foreach(PowerUp powerUp in powerUps)

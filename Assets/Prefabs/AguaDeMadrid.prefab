@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4966657942355910081}
   - component: {fileID: 7093715265965957829}
   - component: {fileID: 7566921282108523300}
-  - component: {fileID: 8859578629959426755}
-  - component: {fileID: 1980441181149570474}
+  - component: {fileID: 5159693910022953259}
   m_Layer: 0
-  m_Name: AguaDeMadridPowerUp
+  m_Name: AguaDeMadrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,20 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4860814, y: 11.85}
   m_EdgeRadius: 0
---- !u!114 &8859578629959426755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7697152569053438666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8a0e1d49eeaac4a87439457df26ec2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpReference: {fileID: 0}
---- !u!114 &1980441181149570474
+--- !u!114 &5159693910022953259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575533b6b5a16b842924e8b5aff9aaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerup: {fileID: 0}
+  powerup: {fileID: 11400000, guid: 379eb6c66fc37ce42807a5610750d4b8, type: 2}

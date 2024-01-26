@@ -32,7 +32,7 @@ public class InventoryUI : MonoBehaviour
         inventoryPanel = Canvas.transform.GetChild(2).gameObject;
         inventoryPanelDescription = inventoryPanel.transform.GetChild(0).gameObject;
         DescriptionText = inventoryPanelDescription.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        DescriptionName = inventoryPanelDescription.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        DescriptionName = inventoryPanelDescription.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         Debug.Log(inventoryPanel.name);
         LoadInventory();
     }

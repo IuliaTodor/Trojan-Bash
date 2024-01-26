@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
     public string SaveFiles;
     public GameData gameData = new GameData();
+
 
     private void Awake()
     {
@@ -43,46 +45,26 @@ public class DataManager : MonoBehaviour
             GameData loadedData = JsonUtility.FromJson<GameData>(content);
 
             //_____________________________________________________________
-
             gameData.bytes = loadedData.bytes;
             gameData.powerUps = loadedData.powerUps;
             gameData.images = loadedData.images;
+
+            gameData.sliderMusicValue = loadedData.sliderMusicValue;
+            gameData.sliderSFXValue = loadedData.sliderSFXValue;
+
+            gameData.logroPuntos = loadedData.logroPuntos;
+            gameData.logroMatar = loadedData.logroMatar;
 
             //_____________________________________________________________
 
             GameManager.Instance.bytes = gameData.bytes;
 
-            if (Inventory.instance != null)
-            {
-                Inventory.instance.powerUps = gameData.powerUps;
-                if (InventoryUI.instance != null)
-                {
-                    for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
-                    {
-                        if (InventoryUI.instance.slots[i] != null)
-                        {
-                            Debug.Log("se actualiz� unu");
-                            Debug.Log("i" + i);
-                            Debug.Log("Length " + Inventory.instance.powerUps.Length);
 
-                            //Usa el PowerUp Actual como �ndice para saber cuantos elementos del array PowerUps tienen scriptable object asignado
-                            PowerUp currentPowerUp = Inventory.instance.powerUps[i];
 
-                            if (currentPowerUp != null)
-                            {
-                                Debug.Log("se actualiz� unu");
-                                Debug.Log("i" + i);
-                                Debug.Log("PowerUp: " + currentPowerUp); // You can access properties of the current power-up here
-
-                                // Now, use the i variable as needed, knowing that it corresponds to a slot with a power-up
-                                InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
-                            }
-                        }
-                    }
-                }
-            }
-
-            Debug.Log("Inventory Game Data: " + gameData.powerUps);
+            StartCoroutine(LoadSound());
+            StartCoroutine(LoadAchievements());
+            StartCoroutine(LoadInventoryData());
+            
         }
         else
         {
@@ -101,17 +83,28 @@ public class DataManager : MonoBehaviour
                 newData.powerUps = Inventory.instance.powerUps;
                 newData.images = new List<Sprite>();
 
-
-                Debug.Log("Slots count: " + InventoryUI.instance.slots.Count);
-
                 for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
                 {
-                    Debug.Log("Imagen slot: " + InventoryUI.instance.slots[i].icon.sprite);
-
                     newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
                     newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
                 }
             }
+
+            if (TestSlider.instance != null)
+            {
+                newData.sliderMusicValue = TestSlider.instance.musicSlider.value;
+                newData.sliderSFXValue = TestSlider.instance.efectSlider.value;
+            }
+
+            if(TestSlider.instance == null)
+            {
+                newData.sliderMusicValue = 0.5f;
+                newData.sliderSFXValue = 0.5f;
+            }
+
+            newData.logroPuntos = GameManager.Instance.SeDesbloqueo;
+            newData.logroMatar = GameManager.Instance.SeDesbloqueo1;
+
         };
 
         string JsonString = JsonUtility.ToJson(newData);
@@ -120,4 +113,55 @@ public class DataManager : MonoBehaviour
 
         Debug.Log("Saved File");
     }
+
+    IEnumerator LoadInventoryData()
+    {
+        while (Inventory.instance == null)
+        {
+            yield return null;
+        }
+
+        if(gameData.powerUps.Length != 0)
+        {
+            Inventory.instance.powerUps = gameData.powerUps;
+        }
+
+        if (InventoryUI.instance != null)
+        {
+            for (int i = 0; i < InventoryUI.instance.slots.Count; i++)
+            {
+                if (InventoryUI.instance.slots[i] != null)
+                {
+                    PowerUp currentPowerUp = Inventory.instance.powerUps[i];
+
+                    if (currentPowerUp != null)
+                    {
+                        InventoryUI.instance.slots[i].UpdateSlotUI(currentPowerUp);
+                    }
+                }
+            }
+        }
+    }
+
+    IEnumerator LoadSound()
+    {
+        if (TestSlider.instance != null)
+        {
+            TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;
+            TestSlider.instance.efectSlider.value = gameData.sliderSFXValue;
+        }
+
+
+        yield return true;
+    }
+
+    IEnumerator LoadAchievements()
+    {
+            GameManager.Instance.SeDesbloqueo = gameData.logroPuntos;
+            GameManager.Instance.SeDesbloqueo1 = gameData.logroMatar;
+
+        yield return true;
+    }
+
+
 }

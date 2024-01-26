@@ -56,6 +56,7 @@ public class VidasP : MonoBehaviour
             {
                 Hurt();
                 Debug.Log("A");
+                ultimaColl = collision.transform.tag;
             }
             if (collision.gameObject.CompareTag("MainCamera"))
             {
@@ -64,7 +65,7 @@ public class VidasP : MonoBehaviour
             }
             //Si el jugador se encuentra atrapado entre la camara y un obstaculo a 
             //los obstaculos se les quita el box collider 
-            if (ultimaColl == "MainCamera" && collision.gameObject.CompareTag("Enemy"))
+            if (ultimaColl == "MainCamera" && collision.gameObject.CompareTag("Enemy") || ultimaColl == "Enemy" && collision.gameObject.CompareTag("MainCamera"))
             {
                 GameObject[] list = GameObject.FindGameObjectsWithTag("Enemy");
                 foreach (var obj in list)

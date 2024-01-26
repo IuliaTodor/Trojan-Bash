@@ -52,6 +52,7 @@ public class MenuController : MonoBehaviour
         AudioManager.instance.StopPlaying("MusicGame");
         AudioManager.instance.ChoosePlay("MusicMenu", 1);
         DataManager.instance.SaveData();
+        Debug.Log("Guardado");
         SceneManager.LoadScene("MainMenu");
     }
 

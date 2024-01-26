@@ -12,4 +12,8 @@ public class GameData
     public PowerUp[] powerUps;
     // public List<Slot> slots;
     public List<Sprite> images;
+    public float sliderMusicValue;
+    public float sliderSFXValue;
+    public bool logroPuntos;
+    public bool logroMatar;
 }

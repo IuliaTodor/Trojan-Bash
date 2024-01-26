@@ -10,6 +10,7 @@ public class NerfEffect : PowerUp
     public override void ApplyPowerUpEffect(GameObject target)
     {
         Debug.Log("activado power up");
+        MovimientoPersonaje.instance.velocidadMovimiento = MovimientoPersonaje.instance.currentSpeed;
         MovimientoPersonaje.instance.velocidadMovimiento *= speedBoost;
     }
 }

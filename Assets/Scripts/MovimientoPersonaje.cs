@@ -12,6 +12,7 @@ public class MovimientoPersonaje : MonoBehaviour
     private BoxCollider2D boxCollider;
     private PolygonCollider2D polygonCollider;
     public static MovimientoPersonaje instance;
+    public float currentSpeed;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class MovimientoPersonaje : MonoBehaviour
         rb = GetComponent < Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         polygonCollider = GetComponent<PolygonCollider2D>();
+        currentSpeed = velocidadMovimiento;
     }
 
     void Update()

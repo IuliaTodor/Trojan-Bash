@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: AguaMadrid
   PowerUpName: Agua de Madrid
-  description: Sabe a puta mierda
+  description: Aumenta los puntos obtenidos por 1.5
   image: {fileID: 21300000, guid: 7b63c10936252444384f4109b18f8a76, type: 3}
-  cost: 100
-  hasBeenPurchased: 1
+  cost: 1000
+  hasBeenPurchased: 0
   bytesMultiplier: 3

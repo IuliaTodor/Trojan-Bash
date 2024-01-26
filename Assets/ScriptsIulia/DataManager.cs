@@ -145,6 +145,11 @@ public class DataManager : MonoBehaviour
 
     IEnumerator LoadSound()
     {
+        while (TestSlider.instance == null)
+        {
+            yield return null;
+        }
+
         if (TestSlider.instance != null)
         {
             TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;

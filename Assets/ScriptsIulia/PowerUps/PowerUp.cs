@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ShopMenu", menuName = "PowerUp")]
-public class PowerUp : ScriptableObject
+public abstract class PowerUp : ScriptableObject
 {
     public string ID;
     public string PowerUpName;
@@ -13,10 +13,7 @@ public class PowerUp : ScriptableObject
     public int cost;
     public bool hasBeenPurchased = false;
 
-    public virtual bool ApplyPowerUpEffect()
-    {
-        return true;
-    }
+    public abstract void ApplyPowerUpEffect();
 
     public virtual bool DiscardPowerUp()
     {

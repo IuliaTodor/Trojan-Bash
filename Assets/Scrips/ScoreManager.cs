@@ -27,6 +27,6 @@ public class ScoreManager : MonoBehaviour
     {
         score += s;
         GameManager.Instance.bytes += s;
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString() + " Bytes";
     }
 }

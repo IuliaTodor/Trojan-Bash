@@ -2715,10 +2715,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1012529301}
     m_Modifications:
-    - target: {fileID: 1076882848624872343, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 103.4
-      objectReference: {fileID: 0}
     - target: {fileID: 1097803443376143352, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
       propertyPath: m_Name
       value: PowerUpTemplate (1)
@@ -2728,12 +2724,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1431875383}
     - target: {fileID: 2336232120551631101, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -19.9
+      propertyPath: m_LocalScale.x
+      value: 1.3125
       objectReference: {fileID: 0}
-    - target: {fileID: 5735110973453924732, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.0000076293945
+    - target: {fileID: 6337241765405583011, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.210115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337241765405583011, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784508396210716393, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
+      propertyPath: m_text
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8254147746417176706, guid: 35d86a20a764cc840a543a22bdde9d78, type: 3}
       propertyPath: m_Pivot.x

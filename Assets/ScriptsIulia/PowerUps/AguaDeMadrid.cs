@@ -7,7 +7,7 @@ public class AguaDeMadrid : PowerUp
 {
     public int bytesMultiplier;
 
-    public override bool ApplyPowerUpEffect()
+    public override void ApplyPowerUpEffect()
     {
         Debug.Log("activado power up");
         GameManager.Instance.bytes *= bytesMultiplier;

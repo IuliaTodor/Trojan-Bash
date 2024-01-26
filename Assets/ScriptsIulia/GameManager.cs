@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public bool SeDesbloqueo;
     public bool SeDesbloqueo1;
 
+    public int dieEnemy = 0;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,6 +31,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("el pepe");
         }
+
+        dieEnemy = 0;
+    }
+
+    private void Update()
+    {
+        Debug.Log("Enemigo muerto" + dieEnemy);
     }
 
     public void SceneChange(string sceneName)

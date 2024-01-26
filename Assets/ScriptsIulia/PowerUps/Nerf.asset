@@ -17,6 +17,6 @@ MonoBehaviour:
   description: Aumenta la velocidad de movimiento en un 1.5
   image: {fileID: 21300000, guid: 0cce83a47a994d9438ace94957b64b0c, type: 3}
   cost: 1500
-  hasBeenPurchased: 0
+  hasBeenPurchased: 1
   duration: 4
   speedBoost: 1.5

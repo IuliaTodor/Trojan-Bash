@@ -27,12 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        powerUps = new PowerUp[DataManager.instance.gameData.powerUps.Length];
-
-        for (int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
-        {
-            powerUps[i] = DataManager.instance.gameData.powerUps[i];
-        }
+        
 
 
         dieEnemy = 0;

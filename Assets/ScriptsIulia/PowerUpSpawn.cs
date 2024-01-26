@@ -24,9 +24,7 @@ public class PowerUpSpawn : MonoBehaviour
 
             //Asegura que al menos un power up sea no null
             if (GameManager.Instance.powerUps.Any(p => p != null) || InventoryPowerUpList.Count > 0)
-
             {
-                Debug.Log("entra a instanciar");
                 Instantiate(GetRandomPowerUp(), new Vector3(cam.GetComponent<Transform>().position.x + camBoundsX, spawnPosY, 0), new Quaternion());
             }
         }
@@ -38,7 +36,6 @@ public class PowerUpSpawn : MonoBehaviour
         InventoryPowerUpList = PowerUpList();
         if (InventoryPowerUpList.Count > 0)
         {
-            Debug.Log("entra a random");
             return InventoryPowerUpList[Random.Range(0, InventoryPowerUpList.Count)];
         }
 
@@ -59,8 +56,6 @@ public class PowerUpSpawn : MonoBehaviour
 
                 if (matchingSpawnObject != null && !InventoryPowerUpList.Contains(matchingSpawnObject))
                 {
-                    Debug.Log("Found power-up: " + powerUp.ID);
-                    Debug.Log("Added to InventoryPowerUpList: " + powerUp.ID);
                     InventoryPowerUpList.Add(matchingSpawnObject);
                 }
             }

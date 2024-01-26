@@ -2255,7 +2255,7 @@ MonoBehaviour:
   InventoryPowerUpList: []
   cam: {fileID: 1398329376}
   camBoundsX: 0
-  fercuencia: 2
+  fercuencia: 6
 --- !u!1 &1103205028
 GameObject:
   m_ObjectHideFlags: 0

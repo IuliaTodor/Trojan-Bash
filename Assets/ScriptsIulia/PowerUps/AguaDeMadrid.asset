@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b255df25e79454981ff74aca95048e, type: 3}
+  m_Script: {fileID: 11500000, guid: b4d0ed1b6564b6342a5de5c2a1162815, type: 3}
   m_Name: AguaDeMadrid
   m_EditorClassIdentifier: 
-  ID: AguaMadrid
+  ID: AguaDeMadrid
   PowerUpName: Agua de Madrid
-  description: Sabe a puta mierda
+  description: Aumenta los puntos obtenidos por 2
   image: {fileID: 21300000, guid: 7b63c10936252444384f4109b18f8a76, type: 3}
-  cost: 100
-  hasBeenPurchased: 1
-  bytesMultiplier: 3
+  cost: 1000
+  hasBeenPurchased: 0
+  duration: 5
+  bytesMultiplier: 2

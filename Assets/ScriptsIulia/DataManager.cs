@@ -88,6 +88,8 @@ public class DataManager : MonoBehaviour
                     newData.images.Add(InventoryUI.instance.slots[i].icon.sprite);
                     newData.images[i] = InventoryUI.instance.slots[i].icon.sprite;
                 }
+
+               
             }
 
             if (TestSlider.instance != null)
@@ -102,9 +104,19 @@ public class DataManager : MonoBehaviour
                 newData.sliderSFXValue = 0.5f;
             }
 
+            if(newData.powerUps != null)
+            {
+                GameManager.Instance.powerUps = new PowerUp[newData.powerUps.Length];
+
+                for (int i = 0; i < newData.powerUps.Length; i++)
+                {
+                    GameManager.Instance.powerUps[i] = newData.powerUps[i];
+                }
+            }
+          
+
             newData.logroPuntos = GameManager.Instance.SeDesbloqueo;
             newData.logroMatar = GameManager.Instance.SeDesbloqueo1;
-
         };
 
         string JsonString = JsonUtility.ToJson(newData);
@@ -145,6 +157,11 @@ public class DataManager : MonoBehaviour
 
     IEnumerator LoadSound()
     {
+        while (TestSlider.instance == null)
+        {
+            yield return null;
+        }
+
         if (TestSlider.instance != null)
         {
             TestSlider.instance.musicSlider.value = gameData.sliderMusicValue;

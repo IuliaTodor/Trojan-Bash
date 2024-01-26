@@ -5,19 +5,14 @@ using UnityEngine;
 public class DestroyEnemy : MonoBehaviour
 {
     //public static DestroyEnemy DestroyEn;
-    public int dieEnemy = 0;
+  
   
     // Start is called before the first frame update
-    void Start()
-    {
-        dieEnemy = 0;
-    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            dieEnemy += 1;
-            Debug.Log("Enemigo muerto" +  dieEnemy);
+            GameManager.Instance.dieEnemy += 1;
             Destroy(collision.gameObject);
             Destroy(gameObject);
           

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 48299436390525317}
   - component: {fileID: 6906919174793326818}
   - component: {fileID: 9067056611468086604}
-  - component: {fileID: 7623854001713829865}
+  - component: {fileID: 5297833040682252810}
   m_Layer: 0
   m_Name: Nerf
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.901566, y: 16.971752}
   m_EdgeRadius: 0
---- !u!114 &7623854001713829865
+--- !u!114 &5297833040682252810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5032998193425777294}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8a0e1d49eeaac4a87439457df26ec2, type: 3}
+  m_Script: {fileID: 11500000, guid: 575533b6b5a16b842924e8b5aff9aaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpReference: {fileID: 11400000, guid: 6da2f310d76cac240ac4e118166cf044, type: 2}
+  powerup: {fileID: 11400000, guid: 6da2f310d76cac240ac4e118166cf044, type: 2}

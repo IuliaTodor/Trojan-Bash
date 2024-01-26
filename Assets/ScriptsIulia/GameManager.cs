@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     public bool SeDesbloqueo;
     public bool SeDesbloqueo1;
 
+    public int dieEnemy = 0;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -24,10 +27,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
-        {
-            Debug.Log("el pepe");
-        }
+        
+
+
+        dieEnemy = 0;
     }
 
     public void SceneChange(string sceneName)

@@ -9,7 +9,7 @@ public class Logros : MonoBehaviour
         int puntajeActual = GameManager.Instance.bytes;
         int enemigosMuertos = GameManager.Instance.dieEnemy;
         Debug.Log(GameManager.Instance.SeDesbloqueo1);
-        if (puntajeActual >= 1000 && !GameManager.Instance.SeDesbloqueo)
+        if (puntajeActual >= 100 && !GameManager.Instance.SeDesbloqueo)
         {
             GameManager.Instance.SeDesbloqueo = true;
 

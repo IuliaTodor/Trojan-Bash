@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4216119488518189643
+--- !u!1 &7697152569053438666
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8093009587200336591}
-  - component: {fileID: 7464682976368393997}
-  - component: {fileID: 9141209028866318947}
-  - component: {fileID: 3452068527198378862}
+  - component: {fileID: 4966657942355910081}
+  - component: {fileID: 7093715265965957829}
+  - component: {fileID: 7566921282108523300}
+  - component: {fileID: 8859578629959426755}
+  - component: {fileID: 1980441181149570474}
   m_Layer: 0
   m_Name: AguaDeMadridPowerUp
   m_TagString: Untagged
@@ -19,28 +20,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8093009587200336591
+--- !u!4 &4966657942355910081
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216119488518189643}
+  m_GameObject: {fileID: 7697152569053438666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.514221, y: -2.617974, z: 0}
   m_LocalScale: {x: 0.19, y: 0.13593751, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7464682976368393997
+--- !u!212 &7093715265965957829
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216119488518189643}
+  m_GameObject: {fileID: 7697152569053438666}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9141209028866318947
+--- !u!61 &7566921282108523300
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216119488518189643}
+  m_GameObject: {fileID: 7697152569053438666}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -131,16 +132,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4860814, y: 11.85}
   m_EdgeRadius: 0
---- !u!114 &3452068527198378862
+--- !u!114 &8859578629959426755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216119488518189643}
+  m_GameObject: {fileID: 7697152569053438666}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be8a0e1d49eeaac4a87439457df26ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpReference: {fileID: 11400000, guid: 379eb6c66fc37ce42807a5610750d4b8, type: 2}
+  powerUpReference: {fileID: 0}
+--- !u!114 &1980441181149570474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697152569053438666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575533b6b5a16b842924e8b5aff9aaf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerup: {fileID: 0}

@@ -27,10 +27,23 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
+        bytes = 2000;
+
+        powerUps = new PowerUp[DataManager.instance.gameData.powerUps.Length];
+
+        for (int i = 0; i < DataManager.instance.gameData.powerUps.Length; i++)
         {
+            powerUps[i] = DataManager.instance.gameData.powerUps[i];
             Debug.Log("el pepe");
         }
+        Debug.Log(powerUps.Length);
+        Debug.Log(DataManager.instance.gameData.powerUps.Length);
+        if (DataManager.instance.gameData.powerUps.Length > 0 || GameManager.Instance.powerUps.Length > 0)
+        {
+            Debug.Log(DataManager.instance.gameData.powerUps[0]);
+            Debug.Log(powerUps[0]);
+        }
+
 
         dieEnemy = 0;
     }

@@ -12,11 +12,7 @@ public abstract class PowerUp : ScriptableObject
     public Sprite image;
     public int cost;
     public bool hasBeenPurchased = false;
+    public float duration;
 
-    public abstract void ApplyPowerUpEffect();
-
-    public virtual bool DiscardPowerUp()
-    {
-        return true;
-    }
+    public abstract void ApplyPowerUpEffect(GameObject target);
 }

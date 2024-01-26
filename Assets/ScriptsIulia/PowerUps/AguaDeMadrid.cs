@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PowerUps/AguaDeMadrid")]
-public class AguaDeMadrid : PowerUp
+public class PowerUpEffect : MonoBehaviour
 {
-    public int bytesMultiplier;
+    public PowerUp powerup;
 
-    public override void ApplyPowerUpEffect()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("activado power up");
-        GameManager.Instance.bytes *= bytesMultiplier;
-        return true;
+        powerup.ApplyPowerUpEffect(collision.gameObject);
+        Destroy(gameObject);
     }
 }

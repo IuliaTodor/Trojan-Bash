@@ -11,9 +11,11 @@ public class MovimientoPersonaje : MonoBehaviour
     private bool enElSuelo;
     private BoxCollider2D boxCollider;
     private PolygonCollider2D polygonCollider;
+    public static MovimientoPersonaje instance;
 
     void Start()
     {
+        instance = this;
         _animator = gameObject.GetComponent<Animator>();
         rb = GetComponent < Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
